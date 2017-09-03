@@ -116,6 +116,15 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'mask' => [
+            'packagePath' => 'typo3conf/ext/mask/',
+        ],
+        'ws_scss' => [
+            'packagePath' => 'typo3conf/ext/ws_scss/',
+        ],
+        'threeme' => [
+            'packagePath' => 'typo3conf/ext/threeme/',
+        ],
     ],
     'version' => 5,
 ];

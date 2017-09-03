@@ -3,14 +3,14 @@ return [
     'BE' => [
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$pbkdf2-sha256$25000$1uyMEFdKcqGFPeLq1NTKeA$Mq0um/NtTzf6.t5t6EnBpQ1lwl5ZyHloLTmE0QNUJ9U',
+        'installToolPassword' => '$pbkdf2-sha256$25000$e.zFeLjgLEN/mQ4rT3g2Cg$Tw2h5bDgiAk93SVGHt9gqQhWYVI1WgEzbZQhRiOlLNg',
         'loginSecurityLevel' => 'rsa',
     ],
     'DB' => [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8',
-                'dbname' => 'typo3Test',
+                'dbname' => 'testDB',
                 'driver' => 'mysqli',
                 'host' => '127.0.0.1',
                 'password' => '',
@@ -21,8 +21,11 @@ return [
     ],
     'EXT' => [
         'extConf' => [
+            'mask' => 'a:9:{s:4:"json";s:19:"typo3conf/mask.json";s:18:"backendlayout_pids";s:3:"0,1";s:7:"content";s:28:"fileadmin/templates/content/";s:7:"layouts";s:36:"fileadmin/templates/content/Layouts/";s:8:"partials";s:37:"fileadmin/templates/content/Partials/";s:7:"backend";s:28:"fileadmin/templates/backend/";s:15:"layouts_backend";s:36:"fileadmin/templates/backend/Layouts/";s:16:"partials_backend";s:37:"fileadmin/templates/backend/Partials/";s:7:"preview";s:28:"fileadmin/templates/preview/";}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'saltedpasswords' => 'a:2:{s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\Pbkdf2Salt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}s:3:"FE.";a:5:{s:7:"enabled";i:1;s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\Pbkdf2Salt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}}',
+            'threeme' => 'a:0:{}',
+            'ws_scss' => 'a:0:{}',
         ],
     ],
     'FE' => [
@@ -58,11 +61,11 @@ return [
         'devIPmask' => '',
         'displayErrors' => 0,
         'enableDeprecationLog' => false,
-        'encryptionKey' => '97af1f14d098bd237c746def8df6f7ab0bb4314a533e09f8b7c77634a583553f63a111b3ecf817ad85f8ace37c6ebaa0',
+        'encryptionKey' => '45fde01b814784998b860c9c56808b4c24fc1564f2e5637acdd8b6aeb71ac2ff25d404c8d783414a3c22e5d49efba68c',
         'exceptionalErrors' => 20480,
         'isInitialDatabaseImportDone' => true,
         'isInitialInstallationInProgress' => false,
-        'sitename' => 'Test TYPO3 site',
+        'sitename' => 'typo3TestSite',
         'sqlDebug' => 0,
         'systemLogLevel' => 2,
     ],

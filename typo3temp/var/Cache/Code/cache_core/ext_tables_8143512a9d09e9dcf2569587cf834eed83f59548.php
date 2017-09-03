@@ -1149,4 +1149,89 @@ if (TYPO3_MODE === 'BE' && !(TYPO3_REQUESTTYPE & TYPO3_REQUESTTYPE_INSTALL)) {
     );
 }
 
+/**
+ * Extension: mask
+ * File: C:/xampp/htdocs/typo3/typo3conf/ext/mask/ext_tables.php
+ */
+
+$_EXTKEY = 'mask';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
+
+
+if (!defined('TYPO3_MODE')) {
+   die('Access denied.');
+}
+
+if (TYPO3_MODE === 'BE') {
+
+   /**
+	* Registers a Backend Module
+	*/
+   \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+	   'MASK.' . $_EXTKEY, 'tools', // Make module a submodule of 'admin'
+	   'mask', // Submodule key
+	   'top', // Position
+	   array(
+	   'WizardContent' => 'list, new, create, edit, update, delete, purge, generate, showHtml, createMissingFolders, hide, activate',
+	   'WizardPage' => 'list, new, create, edit, update, delete',
+	   ), array(
+	   'access' => 'admin',
+	   'icon' => 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/module-mask_wizard.svg',
+	   'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_mask.xlf',
+	   )
+   );
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerAjaxHandler(
+	   'WizardController::checkFieldKey', 'MASK\Mask\Controller\WizardController->checkFieldKey'
+   );
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerAjaxHandler(
+	   'WizardController::checkElementKey', 'MASK\Mask\Controller\WizardController->checkElementKey'
+   );
+}
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Mask');
+
+// include css for styling of backend preview of mask content elements
+$TBE_STYLES['skins']['mask']['name'] = 'mask';
+$TBE_STYLES['skins']['mask']['stylesheetDirectories'][] = 'EXT:mask/Resources/Public/Styles/Backend/';
+//$TBE_STYLES['skins']['mask']['stylesheetDirectories'][] = "/" . $settings["backend"];
+
+$storageRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('MASK\\Mask\\Domain\\Repository\\StorageRepository');
+$configuration = $storageRepository->load();
+
+if (!empty($configuration)) {
+    $tcaCodeGenerator = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('MASK\\Mask\\CodeGenerator\\TcaCodeGenerator');
+
+    // allow all inline tables on standard pages
+    $tcaCodeGenerator->allowInlineTablesOnStandardPages($configuration);
+}
+
+/**
+ * Extension: threeme
+ * File: C:/xampp/htdocs/typo3/typo3conf/ext/threeme/ext_tables.php
+ */
+
+$_EXTKEY = 'threeme';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
+
+
+if (!defined('TYPO3_MODE')) { die('Access denied.'); }
+
+if (TYPO3_MODE == 'BE') {
+    // Add Threeme Logo and Background
+    $extConfBackend = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend']);
+
+    if (empty(trim($extConfBackend['loginLogo']))) {
+        $extConfBackend['loginLogo'] = 'EXT:threeme/Resources/Public/Images/Backend/LoginLogo.png';
+    }
+    if (empty(trim($extConfBackend['loginHighlightColor']))) {
+        $extConfBackend['loginHighlightColor'] = '#166299';
+    }
+    if (empty(trim($extConfBackend['loginBackgroundImage']))) {
+        $extConfBackend['loginBackgroundImage'] = 'EXT:threeme/Resources/Public/Images/Backend/LoginBackgroundImage.jpg';
+    }
+
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize($extConfBackend);
+}
+
 #
