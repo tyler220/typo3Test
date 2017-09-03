@@ -1,0 +1,10 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:frontend_editing 1.1.2
+# #################################################
+
+# Include static from extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:frontend_editing/Configuration/TypoScript/setup.ts">
+
+# Enable frontend editing
+config.frontend_editing = 1

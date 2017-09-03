@@ -1,0 +1,215 @@
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="BackendLayouts.home.title">
+                <source>Home</source>
+                <target>Startseite</target>
+            </trans-unit>
+            <trans-unit id="BackendLayouts.default.title">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="BackendLayouts.404.title">
+                <source>404 Page</source>
+                <target>404 Seite</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.colPos.altLabels.0">
+                <source>Inhalte (Mitte)</source>
+                <target>Inhalte (Mitte)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.1">
+                <source>Inhalte (Links)</source>
+                <target>Inhalte (Links)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.2">
+                <source>Inhalte (Rechts)</source>
+                <target>Inhalte (Rechts)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.3">
+                <source>Inhalte (Unten)</source>
+                <target>Inhalte (Unten)</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.colPos.altLabels.100">
+                <source>Columns 100+ = header, 200+ = Content, 300+ = Footer</source>
+                <target>Spalten 100+ = header, 200+ = Content, 300+ = Footer</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.200">
+                <source>Stage</source>
+                <target>Bühne</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.201">
+                <source>Lead</source>
+                <target>Hervorhebung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.202">
+                <source>Banner</source>
+                <target>Banner</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.300">
+                <source>Footer: (Left)</source>
+                <target>Footer: (Links)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.301">
+                <source>Footer: (Center)</source>
+                <target>Footer: (Mitte)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.302">
+                <source>Footer: (Right)</source>
+                <target>Footer: (Rechts)</target>
+            </trans-unit>
+
+            <trans-unit id="translateToMessage">
+                <source>Translate to: %s</source>
+                <target>Übersetzen nach: %s</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.header_layout.altLabels.0">
+                <source>Headline 2 (Default)</source>
+                <target>Überschrift 2. Ordnung (Standard)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.1">
+                <source>Headline 1 (Page header)</source>
+                <target>Überschrift 1. Ordnung (Seitenüberschrift)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.2">
+                <source>Headline 2 (Section header)</source>
+                <target>Überschrift 2. Ordnung (Kapitelüberschrift)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.3">
+                <source>Headline 3 (Subsection header)</source>
+                <target>Überschrift 3. Ordnung (Absatzüberschrift)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.4">
+                <source>Headline 4 (Subsection header)</source>
+                <target>Überschrift 4. Ordnung (Absatzüberschrift)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.5">
+                <source>Headline 5 (Subsection header)</source>
+                <target>Überschrift 5. Ordnung (Absatzüberschrift)</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.threeme_header_css.addItems.200">
+                <source>Color: Primary color I</source>
+                <target>Farbe: Primärfarbe I</target>
+            </trans-unit>
+            <trans-unit id="tt_content.threeme_header_css.addItems.201">
+                <source>Color: Primary color II</source>
+                <target>Farbe: Primärfarbe II</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.header_position.left">
+                <source>Orientation: Left</source>
+                <target>Ausrichtung: Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_position.center">
+                <source>Orientation: Center</source>
+                <target>Ausrichtung: Zentriert</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_position.right">
+                <source>Orientation: Right</source>
+                <target>Ausrichtung: Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.header_position.justify">
+                <source>Orientation: Justify</source>
+                <target>Ausrichtung: Blocksatz</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.200">
+                <source>Image shapes: Rounded</source>
+                <target>Bilder mit runden Kanten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.201">
+                <source>Image shapes: Circle</source>
+                <target>Kreisrunde Bilder</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.202">
+                <source>Image shapes: Thumbnail</source>
+                <target>Bilder als Thumbnail</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.layout.types.table.addItems.200">
+                <source>Table: Striped rows</source>
+                <target>Tabelle gestreift</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.201">
+                <source>Table: Bordered</source>
+                <target>Tabelle umrandet</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.202">
+                <source>Table: Hover rows</source>
+                <target>Tabelle hervorgeboben</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.203">
+                <source>Table: Condensed</source>
+                <target>Tabelle kompakt</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.layout.types.bullets.addItems.200">
+                <source>List: Unstyled</source>
+                <target>Punktliste ohne Auszeichnung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.bullets.addItems.201">
+                <source>List: Inline</source>
+                <target>Punktliste in Reihe</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-small">
+                <source>Extra small</source>
+                <target>Extra klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.small">
+                <source>Small</source>
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.medium">
+                <source>Medium</source>
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.large">
+                <source>Large</source>
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-large">
+                <source>Extra large</source>
+                <target>Extra groß</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-small">
+                <source>Extra small</source>
+                <target>Extra klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.small">
+                <source>Small</source>
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.medium">
+                <source>Medium</source>
+                <target>Medium</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.large">
+                <source>Large</source>
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-large">
+                <source>Extra large</source>
+                <target>Extra groß</target>
+            </trans-unit>
+
+            <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
+                <source>Hide label</source>
+                <target>Bezeichnung ausblenden</target>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_page.css.altLabels.nolabel">
+                <source>Hide label</source>
+                <target>Bezeichnung ausblenden</target>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_field.css.altLabels.nolabel">
+                <source>Hide label</source>
+                <target>Bezeichnung ausblenden</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

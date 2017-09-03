@@ -1,0 +1,25 @@
+.news {
+    .news-list-view {
+        .article {
+            margin-top: ($padding-large-horizontal * 2);
+            padding-top: ($padding-large-horizontal * 2);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-border-color, 0);
+        }
+    }
+
+    .news-date {
+        display: block;
+        font-size: $font-size-small;
+        color: $gray-dark;
+    }
+
+    .news-backlink-wrap {
+        margin-top: $padding-large-horizontal;
+    }
+
+    .news-img-wrap {
+        img {
+            @extend .img-responsive;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+
+renderingOptions:
+  submitButtonLabel: Senden
+identifier: ext-threeme-simple-contact-form
+label: 'Threeme: Einfaches Kontaktformular'
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{subject}'
+      recipientAddress: andre@threeme.de
+      recipientName: 'Threeme Distribution'
+      senderAddress: '{email}'
+      senderName: '{vorname} {name}'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: 'true'
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: ''
+      nextButtonLabel: ''
+    identifier: page-1
+    label: ''
+    type: Page
+    renderables:
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: Kontaktaufnahme
+        renderables:
+          -
+            type: GridRow
+            identifier: gridrow-1
+            label: 'Grid: Row'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: vorname
+                label: Vorname
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '6'
+                      xs:
+                        numbersOfColumnsToUse: '12'
+                      sm:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                identifier: name
+                label: Name
+                type: Text
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  gridColumnClassAutoConfiguration:
+                    viewPorts:
+                      md:
+                        numbersOfColumnsToUse: '6'
+                      xs:
+                        numbersOfColumnsToUse: '12'
+                      sm:
+                        numbersOfColumnsToUse: '6'
+                validators:
+                  -
+                    identifier: NotEmpty
+          -
+            defaultValue: ''
+            identifier: email
+            label: 'E-Mail Adresse'
+            type: Text
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: EmailAddress
+          -
+            defaultValue: ''
+            identifier: subject
+            label: Betreff
+            type: Text
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            identifier: message
+            label: 'Ihre Nachricht'
+            type: Textarea
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              text: 'Mit * gekennzeichnete Felder sind Pflichtfelder.'
+            type: StaticText
+            identifier: note
+            label: ''

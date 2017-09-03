@@ -1,0 +1,79 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Library
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Frontend/Library/variables-frontend";
+@import "Frontend/Library/variables-bootstrap";
+@import "Frontend/Library/variables-font-awesome";
+@import "Frontend/Library/variables-plyr";
+@import "Frontend/Library/mixins";
+@import "Frontend/Library/webfonts";
+
+/*!
+ * Vendor
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Vendor/bootstrap";
+@import "Vendor/fancybox";
+@import "Vendor/font-awesome";
+@import "Vendor/plyr";
+
+/*!
+ * Components
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Frontend/Components/type";
+@import "Frontend/Components/ui-icons";
+@import "Frontend/Components/scaffolding";
+@import "Frontend/Components/forms";
+@import "Frontend/Components/buttons";
+@import "Frontend/Components/carousel";
+@import "Frontend/Components/panel";
+
+/*!
+ * Sections
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Frontend/Sections/layout";
+@import "Frontend/Sections/navbar";
+@import "Frontend/Sections/navlist";
+@import "Frontend/Sections/breadcrump";
+@import "Frontend/Sections/footer";
+@import "Frontend/Sections/cookiebar";
+@import "Frontend/Sections/color-palette";
+
+/*!
+ * Extensions
+ * If you use Compass, you need to add the direcotries where additional sass is kept.
+ * See "additional_import_paths" in "Resources/Private/config.rb".
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Extensions/FluidStyledContent/custom";
+//@import "Extensions/FeLogin/custom";
+//@import "Extensions/IndexedSearch/custom";
+@import "Extensions/Mask/threeme-flexbox";
+@import "Extensions/News/custom";
+//@import "Extensions/Powermail/datepicker";
+//@import "Extensions/Powermail/custom";

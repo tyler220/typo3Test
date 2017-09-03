@@ -1,0 +1,19 @@
+# Include subfolders
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TypoScript/Frontend/Menu" extensions="txt,ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TypoScript/Frontend/Lib" extensions="txt,ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TypoScript/Frontend/Page" extensions="txt,ts">
+
+
+# Custom setup for special pagetree "Lightbox"
+[PIDinRootline = {$threeme.frontend.pidLightbox}]
+    config.admPanel = 0
+    page.config.index_enable = 0
+    page.meta.robots = noindex,follow
+[GLOBAL]
+
+
+# Exclude pages form internal and external search results
+[globalVar = TSFE:page|no_search = 1]
+    page.config.index_enable = 0
+    page.meta.robots = noindex,follow
+[end]

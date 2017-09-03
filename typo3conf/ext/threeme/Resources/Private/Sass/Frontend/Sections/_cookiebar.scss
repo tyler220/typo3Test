@@ -1,0 +1,31 @@
+/*!
+ * jQuery Cookiebar Plugin
+ * https://github.com/carlwoodhouse/jquery.cookieBar
+ *
+ * Copyright 2012, Carl Woodhouse
+ * Disclaimer: if you still get fined for not complying with the eu cookielaw, it's not our fault.
+ */
+
+.threeme-cookiebar {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: ($padding-large-vertical * 3) ($padding-large-horizontal * 2);
+    color: $threeme-white;
+    background-color: $gray;
+    @include opacity(.9);
+
+    p {
+        margin: 0;
+        text-align: center;
+        vertical-align: middle;
+        font-size: ($font-size-base + 2);
+        line-height: $line-height-base;
+
+        .btn {
+            margin-left: $padding-small-horizontal;
+        }
+    }
+}

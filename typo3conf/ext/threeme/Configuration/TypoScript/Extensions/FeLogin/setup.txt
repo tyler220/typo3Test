@@ -1,0 +1,66 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from TYPO3 8.7.0
+# #################################################
+
+plugin.tx_felogin_pi1 {
+    welcomeHeader_stdWrap {
+        required = 1
+        wrap = <h3>|</h3>
+        htmlSpecialChars = 1
+    }
+    successHeader_stdWrap < .welcomeHeader_stdWrap
+    logoutHeader_stdWrap < .welcomeHeader_stdWrap
+    errorHeader_stdWrap < .welcomeHeader_stdWrap
+    forgotHeader_stdWrap < .welcomeHeader_stdWrap
+    changePasswordHeader_stdWrap < .welcomeHeader_stdWrap
+
+    welcomeMessage_stdWrap {
+        required = 1
+        wrap = <div class="alert alert-info" role="alert">|</div>
+        htmlSpecialChars = 1
+    }
+    successMessage_stdWrap < .welcomeMessage_stdWrap
+    successMessage_stdWrap.wrap = <div class="alert alert-success" role="alert">|</div>
+
+    logoutMessage_stdWrap < .welcomeMessage_stdWrap
+    logoutMessage_stdWrap.wrap = <div class="alert alert-info" role="alert">|</div>
+
+    errorMessage_stdWrap < .welcomeMessage_stdWrap
+    errorMessage_stdWrap.wrap = <div class="alert alert-danger" role="alert">|</div>
+
+    forgotMessage_stdWrap < .welcomeMessage_stdWrap
+    forgotMessage_stdWrap.wrap = <div class="alert alert-info" role="alert">|</div>
+
+    forgotErrorMessage_stdWrap < .welcomeMessage_stdWrap
+    forgotErrorMessage_stdWrap.wrap = <div class="alert alert-danger" role="alert">|</div>
+
+    forgotResetMessageEmailSentMessage_stdWrap < .welcomeMessage_stdWrap
+    forgotResetMessageEmailSentMessage_stdWrap.wrap = <div class="alert alert-success" role="alert">|</div>
+
+    changePasswordNotValidMessage_stdWrap < .welcomeMessage_stdWrap
+    changePasswordNotValidMessage_stdWrap.wrap = <div class="alert alert-warning" role="alert">|</div>
+
+    changePasswordTooShortMessage_stdWrap < .welcomeMessage_stdWrap
+    changePasswordTooShortMessage_stdWrap.wrap = <div class="alert alert-warning" role="alert">|</div>
+
+    changePasswordNotEqualMessage_stdWrap < .welcomeMessage_stdWrap
+    changePasswordNotEqualMessage_stdWrap.wrap = <div class="alert alert-warning" role="alert">|</div>
+
+    changePasswordMessage_stdWrap < .welcomeMessage_stdWrap
+    changePasswordMessage_stdWrap.wrap = <div class="alert alert-info" role="alert">|</div>
+
+    changePasswordDoneMessage_stdWrap < .welcomeMessage_stdWrap
+    changePasswordDoneMessage_stdWrap.wrap = <div class="alert alert-success" role="alert">|</div>
+
+    cookieWarning_stdWrap < .welcomeMessage_stdWrap
+    cookieWarning_stdWrap.wrap = <div class="alert alert-danger" role="alert">|</div>
+
+    # stdWrap for fe_users fields used in Messages
+    userfields {
+        username {
+            htmlSpecialChars = 1
+            wrap = <strong>|</strong>
+        }
+    }
+}

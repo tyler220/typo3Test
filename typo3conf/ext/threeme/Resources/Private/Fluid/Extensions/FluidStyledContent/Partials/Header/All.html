@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.header_layout} != 100">
+    <f:if condition="{data.header} || {data.subheader} || {data.date}">
+
+        <div class="threeme-header{f:if(condition:'{data.tx_threeme_header_css}', then:' threeme-header-css-{data.tx_threeme_header_css}')}">
+
+            <f:render partial="Header/Date" arguments="{
+                date: data.date,
+                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
+
+            <f:render partial="Header/Header" arguments="{
+                threemeHeaderCss: '{f:if(condition:\'{data.subheader}\', then:\'\', else:\'{data.tx_threeme_header_css}\')}',
+                header: data.header,
+                subheader: data.subheader,
+                layout: data.header_layout,
+                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                link: data.header_link,
+                default: settings.defaultHeaderType}" />
+
+<f:comment>
+    The subheader is rendered in partial header as <small>{subheader}</small>.
+    If you want to restore the FSC header construct, comment in this partial and remove "<small>{subheader}</small>" from partial header.
+            <f:render partial="Header/SubHeader" arguments="{
+                subheader: data.subheader,
+                layout: data.header_layout,
+                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                default: settings.defaultHeaderType}" />
+</f:comment>
+
+        </div>
+    </f:if>
+</f:if>
+</html>

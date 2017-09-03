@@ -1,0 +1,12 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<a href="#threeme-main" id="threeme-top" class="sr-only sr-only-focusable">{f:translate(key: 'skiptocontent.label', extensionName: 'threeme')}</a>
+
+<div class="threeme-container">
+    <f:render partial="Header" arguments="{_all}" />
+    <f:render section="Website" />
+    <f:render partial="Footer" arguments="{_all}" />
+</div>
+
+</html>

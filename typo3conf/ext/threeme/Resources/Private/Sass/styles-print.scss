@@ -1,0 +1,116 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom "inline" styles
+ * -------------------------------------------------------------------------------------------------
+ */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request: h5bp.com/r
+// ==========================================================================
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster: h5bp.com/s
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; // h5bp.com/t
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    // Bootstrap specific changes start
+
+    // Bootstrap components
+    .navbar {
+        display: none;
+    }
+    .btn,
+    .dropup > .btn {
+        > .caret {
+            border-top-color: #000 !important;
+        }
+    }
+    .label {
+        border: 1px solid #000;
+    }
+
+    .table {
+        border-collapse: collapse !important;
+
+        td,
+        th {
+            background-color: #fff !important;
+        }
+    }
+    .table-bordered {
+        th,
+        td {
+            border: 1px solid #ddd !important;
+        }
+    }
+
+    // Bootstrap specific changes end
+
+    #TSFE_ADMIN_PANEL_FORM {
+        display: none;
+    }
+}

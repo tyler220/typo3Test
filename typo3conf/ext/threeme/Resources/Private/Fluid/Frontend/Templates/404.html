@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Website" />
+
+<f:section name="Website">
+    <div class="threeme-carousel">
+        <f:cObject typoscriptObjectPath="lib.threemeDynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+    </div>
+
+    <main id="threeme-main" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+            </div>
+        </div>
+    </main>
+</f:section>
+</html>

@@ -1,0 +1,55 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom variables
+ *
+ * Custom variales are included first - because of SASS sexy option "!default"
+ * Using Sass !default is like adding an “unless this is already assigned” qualifier to your variable assignments.
+ * Most vendor libraries use the "!default" option, so we could override these values easily.
+ *
+ * Hint: Prefix your variables for better delimitation to vendor libraries.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+$threeme-public-path: "/typo3conf/ext/threeme/Resources/Public/" !default;
+
+//== Threeme typography
+$threeme-custom-font: 'Lobster', cursive;
+//** Default margin-bottom for any kind of elements, ($padding-large-vertical * 2)
+$threeme-margin-bottom: 20px !default;
+
+//== Threeme gutters
+$threeme-container-width: 1600px !default;
+
+//== Threeme colors
+$threeme-white: #FFF !default;
+$threeme-black: #000 !default;
+
+$threeme-green: rgb(79, 194, 128) !default;
+$threeme-blue:  rgb(22, 98, 153) !default;
+$threeme-gray:  rgb(180, 180, 180) !default;
+
+//== Threeme border
+$threeme-border-width: 1px !default;
+$threeme-border-style: solid !default;
+$threeme-border-color: $threeme-gray !default;

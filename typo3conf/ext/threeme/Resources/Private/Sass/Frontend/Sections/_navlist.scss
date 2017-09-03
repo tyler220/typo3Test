@@ -1,0 +1,115 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor framework libraries.
+ *
+ *
+ * #2: Include paritals
+ * - Uncomment features as you need them, when your user stories demand the functionality.
+ * - If you need to modify a partial, create a new one in "Components" and include it after this one!
+ */
+
+
+/*!
+ * Website styles
+ * -------------------------------------------------------------------------------------------------
+ */
+.nav-list-container {
+    margin-bottom: ($padding-large-vertical * 10);
+    padding: ($padding-large-vertical * 3) 0 ($padding-large-vertical * 5) 0;
+    background-color: $gray-lighter;
+
+    .nav-list {
+        .level-1 {
+            > a {
+                margin-right: $grid-gutter-width;
+                padding: $padding-large-vertical 0;
+                text-align: left;
+                color: $text-color;
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+
+                &:focus,
+                &:hover {
+                    color: $link-color;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $link-color;
+                }
+            }
+
+            .nav {
+                margin-left: ($padding-base-horizontal * 2);
+                margin-right: $grid-gutter-width;
+            }
+
+            &.last {
+                > a {
+                    margin-right: 0;
+                }
+
+                .nav {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .level-2 {
+            > a {
+                padding: $padding-large-vertical $padding-small-horizontal;
+                text-align: left;
+                color: darken($gray, 10%);
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+
+                &:focus,
+                &:hover {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            .nav {
+                margin-left: $padding-base-horizontal;
+                margin-right: 0;
+            }
+        }
+
+        .level-3 {
+            > a {
+                padding: $padding-large-vertical $padding-xs-horizontal;
+                color: darken($gray, 10%);
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+
+                &:focus,
+                &:hover {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+Sun, 03 Sep 2017 22:55:36 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "pages". Key was already registered. 
+Sun, 03 Sep 2017 22:55:36 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "sys_file_metadata". Key was already registered. 
+Sun, 03 Sep 2017 22:55:36 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "tt_content". Key was already registered. 
+Sun, 03 Sep 2017 22:55:42 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "pages". Key was already registered. 
+Sun, 03 Sep 2017 22:55:42 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "sys_file_metadata". Key was already registered. 
+Sun, 03 Sep 2017 22:55:42 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "tt_content". Key was already registered. 
+Sun, 03 Sep 2017 22:55:48 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "pages". Key was already registered. 
+Sun, 03 Sep 2017 22:55:48 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "sys_file_metadata". Key was already registered. 
+Sun, 03 Sep 2017 22:55:48 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "tt_content". Key was already registered. 
+Sun, 03 Sep 2017 22:56:57 +0200 [WARNING] request="caa0e63c4e1a4" component="TYPO3.CMS.Impexp.Utility.ImportExportUtility": <style type='text/css'>
+					.extbase-debugger-tree{position:relative}
+					.extbase-debugger-tree input{position:absolute !important;float: none !important;top:0;left:0;height:14px;width:14px;margin:0 !important;cursor:pointer;opacity:0;z-index:2}
+					.extbase-debugger-tree input~.extbase-debug-content{display:none}
+					.extbase-debugger-tree .extbase-debug-header:before{position:relative;top:3px;content:"";padding:0;line-height:10px;height:12px;width:12px;text-align:center;margin:0 3px 0 0;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyIDEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6Izg4ODg4ODt9PC9zdHlsZT48cGF0aCBpZD0iQm9yZGVyIiBjbGFzcz0ic3QwIiBkPSJNMTEsMTFIMFYwaDExVjExeiBNMTAsMUgxdjloOVYxeiIvPjxnIGlkPSJJbm5lciI+PHJlY3QgeD0iMiIgeT0iNSIgY2xhc3M9InN0MCIgd2lkdGg9IjciIGhlaWdodD0iMSIvPjxyZWN0IHg9IjUiIHk9IjIiIGNsYXNzPSJzdDAiIHdpZHRoPSIxIiBoZWlnaHQ9IjciLz48L2c+PC9zdmc+);display:inline-block}
+					.extbase-debugger-tree input:checked~.extbase-debug-content{display:inline}
+					.extbase-debugger-tree input:checked~.extbase-debug-header:before{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyIDEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6Izg4ODg4ODt9PC9zdHlsZT48cGF0aCBpZD0iQm9yZGVyIiBjbGFzcz0ic3QwIiBkPSJNMTEsMTFIMFYwaDExVjExeiBNMTAsMUgxdjloOVYxeiIvPjxnIGlkPSJJbm5lciI+PHJlY3QgeD0iMiIgeT0iNSIgY2xhc3M9InN0MCIgd2lkdGg9IjciIGhlaWdodD0iMSIvPjwvZz48L3N2Zz4=)}
+					.extbase-debugger{display:block;text-align:left;background:#2a2a2a;border:1px solid #2a2a2a;box-shadow:0 3px 0 rgba(0,0,0,.5);color:#000;margin:20px;overflow:hidden;border-radius:4px}
+					.extbase-debugger-floating{position:relative;z-index:999}
+					.extbase-debugger-top{background:#444;font-size:12px;font-family:monospace;color:#f1f1f1;padding:6px 15px}
+					.extbase-debugger-center{padding:0 15px;margin:15px 0;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 20px,#252525 20px,#252525 40px)}
+					.extbase-debugger-center,.extbase-debugger-center .extbase-debug-string,.extbase-debugger-center a,.extbase-debugger-center p,.extbase-debugger-center pre,.extbase-debugger-center strong{font-size:12px;font-weight:400;font-family:monospace;line-height:20px;color:#f1f1f1}
+					.extbase-debugger-center pre{background-color:transparent;margin:0;padding:0;border:0;word-wrap:break-word;color:#999}
+					.extbase-debugger-center .extbase-debug-string{color:#ce9178;white-space:normal}
+					.extbase-debugger-center .extbase-debug-type{color:#569CD6;padding-right:4px}
+					.extbase-debugger-center .extbase-debug-unregistered{background-color:#dce1e8}
+					.extbase-debugger-center .extbase-debug-filtered,.extbase-debugger-center .extbase-debug-proxy,.extbase-debugger-center .extbase-debug-ptype,.extbase-debugger-center .extbase-debug-visibility,.extbase-debugger-center .extbase-debug-scope{color:#fff;font-size:10px;line-height:12px;padding:2px 4px;margin-right:2px;position:relative;top:-1px}
+					.extbase-debugger-center .extbase-debug-scope{background-color:#497AA2}
+					.extbase-debugger-center .extbase-debug-ptype{background-color:#698747}
+					.extbase-debugger-center .extbase-debug-visibility{background-color:#698747}
+					.extbase-debugger-center .extbase-debug-dirty{background-color:#FFFFB6}
+					.extbase-debugger-center .extbase-debug-filtered{background-color:#4F4F4F}
+					.extbase-debugger-center .extbase-debug-seeabove{text-decoration:none;font-style:italic}
+					.extbase-debugger-center .extbase-debug-property{color:#f1f1f1}
+					.extbase-debugger-center .extbase-debug-closure{color:#9BA223;}
+				</style>
+				<div class="extbase-debugger extbase-debugger-inline">
+				<div class="extbase-debugger-top"></div>
+				<div class="extbase-debugger-center">
+					<pre dir="ltr"><span><span class="extbase-debug-type">array</span>(96 items)</span >
+   <span class="extbase-debug-property">0</span> => '<span class="extbase-debug-string">Possible error: tx_scheduler_task_group:3 had no new id assigned to it. This<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indicates that the record was not added to database during import. Please c<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heck changelog!</span>' (167 chars)
+   <span class="extbase-debug-property">1</span> => '<span class="extbase-debug-string">Possible error: tx_scheduler_task_group:2 had no new id assigned to it. This<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indicates that the record was not added to database during import. Please c<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heck changelog!</span>' (167 chars)
+   <span class="extbase-debug-property">2</span> => '<span class="extbase-debug-string">Possible error: tx_scheduler_task_group:1 had no new id assigned to it. This<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indicates that the record was not added to database during import. Please c<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heck changelog!</span>' (167 chars)
+   <span class="extbase-debug-property">3</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:7 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">4</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:8 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">5</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:6 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">6</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:5 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">7</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:4 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">8</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:2 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">9</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:3 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">10</span> => '<span class="extbase-debug-string">Possible error: tx_mask_item:1 had no new id assigned to it. This indicates <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that the record was not added to database during import. Please check change<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log!</span>' (156 chars)
+   <span class="extbase-debug-property">11</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:7 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">12</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:8 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">13</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:9 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">14</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:1 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">15</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:2 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">16</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:3 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">17</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:4 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">18</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:5 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">19</span> => '<span class="extbase-debug-string">Possible error: tx_mask_flexbox:6 had no new id assigned to it. This indicat<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es that the record was not added to database during import. Please check cha<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ngelog!</span>' (159 chars)
+   <span class="extbase-debug-property">20</span> => '<span class="extbase-debug-string">Possible error: tx_news_domain_model_news:2 had no new id assigned to it. Th<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is indicates that the record was not added to database during import. Please<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check changelog!</span>' (169 chars)
+   <span class="extbase-debug-property">21</span> => '<span class="extbase-debug-string">Possible error: tx_news_domain_model_news:1 had no new id assigned to it. Th<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is indicates that the record was not added to database during import. Please<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check changelog!</span>' (169 chars)
+   <span class="extbase-debug-property">22</span> => '<span class="extbase-debug-string">Possible error: tx_mask_panel:1 had no new id assigned to it. This indicates<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that the record was not added to database during import. Please check chang<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elog!</span>' (157 chars)
+   <span class="extbase-debug-property">23</span> => '<span class="extbase-debug-string">Possible error: tx_mask_panel:2 had no new id assigned to it. This indicates<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that the record was not added to database during import. Please check chang<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elog!</span>' (157 chars)
+   <span class="extbase-debug-property">24</span> => '<span class="extbase-debug-string">Possible error: tx_mask_panel:3 had no new id assigned to it. This indicates<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that the record was not added to database during import. Please check chang<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elog!</span>' (157 chars)
+   <span class="extbase-debug-property">25</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:3)</span>' (72 chars)
+   <span class="extbase-debug-property">26</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:2)</span>' (72 chars)
+   <span class="extbase-debug-property">27</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:1)</span>' (72 chars)
+   <span class="extbase-debug-property">28</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:8</span>' (29 chars)
+   <span class="extbase-debug-property">29</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:7</span>' (32 chars)
+   <span class="extbase-debug-property">30</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:8</span>' (32 chars)
+   <span class="extbase-debug-property">31</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:9</span>' (32 chars)
+   <span class="extbase-debug-property">32</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:7</span>' (29 chars)
+   <span class="extbase-debug-property">33</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:6</span>' (29 chars)
+   <span class="extbase-debug-property">34</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:5</span>' (29 chars)
+   <span class="extbase-debug-property">35</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:4</span>' (29 chars)
+   <span class="extbase-debug-property">36</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_panel:1</span>' (30 chars)
+   <span class="extbase-debug-property">37</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_panel:2</span>' (30 chars)
+   <span class="extbase-debug-property">38</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_panel:3</span>' (30 chars)
+   <span class="extbase-debug-property">39</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:6</span>' (32 chars)
+   <span class="extbase-debug-property">40</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:2</span>' (32 chars)
+   <span class="extbase-debug-property">41</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:3</span>' (32 chars)
+   <span class="extbase-debug-property">42</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:1</span>' (32 chars)
+   <span class="extbase-debug-property">43</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:5</span>' (32 chars)
+   <span class="extbase-debug-property">44</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_flexbox:4</span>' (32 chars)
+   <span class="extbase-debug-property">45</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:3</span>' (29 chars)
+   <span class="extbase-debug-property">46</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:2</span>' (29 chars)
+   <span class="extbase-debug-property">47</span> => '<span class="extbase-debug-string">Lost relation: tx_mask_item:1</span>' (29 chars)
+   <span class="extbase-debug-property">48</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:7)</span>' (61 chars)
+   <span class="extbase-debug-property">49</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:8)</span>' (61 chars)
+   <span class="extbase-debug-property">50</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:6)</span>' (61 chars)
+   <span class="extbase-debug-property">51</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:5)</span>' (61 chars)
+   <span class="extbase-debug-property">52</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:4)</span>' (61 chars)
+   <span class="extbase-debug-property">53</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:2)</span>' (61 chars)
+   <span class="extbase-debug-property">54</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:3)</span>' (61 chars)
+   <span class="extbase-debug-property">55</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:1)</span>' (61 chars)
+   <span class="extbase-debug-property">56</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:7)</span>' (64 chars)
+   <span class="extbase-debug-property">57</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:8)</span>' (64 chars)
+   <span class="extbase-debug-property">58</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:9)</span>' (64 chars)
+   <span class="extbase-debug-property">59</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:1)</span>' (64 chars)
+   <span class="extbase-debug-property">60</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:2)</span>' (64 chars)
+   <span class="extbase-debug-property">61</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:3)</span>' (64 chars)
+   <span class="extbase-debug-property">62</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:4)</span>' (64 chars)
+   <span class="extbase-debug-property">63</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:5)</span>' (64 chars)
+   <span class="extbase-debug-property">64</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:6)</span>' (64 chars)
+   <span class="extbase-debug-property">65</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_news_domain_model_news:2)</span>' (74 chars)
+   <span class="extbase-debug-property">66</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_news_domain_model_news:1)</span>' (74 chars)
+   <span class="extbase-debug-property">67</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:1)</span>' (62 chars)
+   <span class="extbase-debug-property">68</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:2)</span>' (62 chars)
+   <span class="extbase-debug-property">69</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:3)</span>' (62 chars)
+   <span class="extbase-debug-property">70</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:3)</span>' (72 chars)
+   <span class="extbase-debug-property">71</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:2)</span>' (72 chars)
+   <span class="extbase-debug-property">72</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_scheduler_task_group:1)</span>' (72 chars)
+   <span class="extbase-debug-property">73</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:7)</span>' (61 chars)
+   <span class="extbase-debug-property">74</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:8)</span>' (61 chars)
+   <span class="extbase-debug-property">75</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:6)</span>' (61 chars)
+   <span class="extbase-debug-property">76</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:5)</span>' (61 chars)
+   <span class="extbase-debug-property">77</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:4)</span>' (61 chars)
+   <span class="extbase-debug-property">78</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:2)</span>' (61 chars)
+   <span class="extbase-debug-property">79</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:3)</span>' (61 chars)
+   <span class="extbase-debug-property">80</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_item:1)</span>' (61 chars)
+   <span class="extbase-debug-property">81</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:7)</span>' (64 chars)
+   <span class="extbase-debug-property">82</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:8)</span>' (64 chars)
+   <span class="extbase-debug-property">83</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:9)</span>' (64 chars)
+   <span class="extbase-debug-property">84</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:1)</span>' (64 chars)
+   <span class="extbase-debug-property">85</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:2)</span>' (64 chars)
+   <span class="extbase-debug-property">86</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:3)</span>' (64 chars)
+   <span class="extbase-debug-property">87</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:4)</span>' (64 chars)
+   <span class="extbase-debug-property">88</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:5)</span>' (64 chars)
+   <span class="extbase-debug-property">89</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_flexbox:6)</span>' (64 chars)
+   <span class="extbase-debug-property">90</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_news_domain_model_news:2)</span>' (74 chars)
+   <span class="extbase-debug-property">91</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_news_domain_model_news:1)</span>' (74 chars)
+   <span class="extbase-debug-property">92</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:1)</span>' (62 chars)
+   <span class="extbase-debug-property">93</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:2)</span>' (62 chars)
+   <span class="extbase-debug-property">94</span> => '<span class="extbase-debug-string">Error: this records is NOT created it seems! (tx_mask_panel:3)</span>' (62 chars)
+   <span class="extbase-debug-property">95</span> => '<span class="extbase-debug-string">ERROR: Could not find file ID in header.</span>' (40 chars)</pre>
+				</div>
+			</div> 

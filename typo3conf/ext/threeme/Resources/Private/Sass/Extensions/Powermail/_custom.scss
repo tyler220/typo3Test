@@ -1,0 +1,26 @@
+/*!
+ * Version note:
+ * Powermail 3.0.1
+ */
+.powermail_form {
+    &.nolabel {
+        div + h3 {
+            @extend .sr-only;
+        }
+    }
+
+    .mandatory {
+        display: inline-block;
+        margin-left: $padding-xs-horizontal;
+        color: $brand-warning;
+    }
+
+    // Hide legend if fieldset layout "nolabel" is set in form
+    fieldset {
+        &.nolabel {
+            legend {
+                @extend .sr-only;
+            }
+        }
+    }
+}

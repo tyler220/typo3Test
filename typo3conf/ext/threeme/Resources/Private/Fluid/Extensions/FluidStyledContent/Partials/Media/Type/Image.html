@@ -1,0 +1,51 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+<figure class="image">
+    <f:if condition="{file.link}">
+        <f:then>
+            <f:comment>
+                @TODO: Integrate lib.parseFunc for typolink to make use of FancyBox feature - or better write a view helper?
+            </f:comment>
+            <f:link.typolink parameter="{file.link}" title="{file.title}">
+                <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, dimensions: dimensions, settings: settings}" /><i class="threeme-ui-enlarge fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></i>
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:if condition="{data.image_zoom}">
+                <f:then>
+                    <f:comment>
+                        FancyBox v3.1 integration
+                    </f:comment>
+                    <a href="{file.publicUrl}"
+                       title="{file.title}"
+                       class="lightbox"
+                       data-fancybox="{data.uid}"
+                       data-caption="{file.title}"
+                       data-width="{file.properties.width}"
+                       data-height="{file.properties.height}"
+                       data-srcset="
+                         {f:uri.image(image: file, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'mobile')} 2x 767w,
+                         {f:uri.image(image: file, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'tablet')} 2x 992w,
+                         {f:uri.image(image: file, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: file, maxWidth: '1984', cropVariant: 'default')} 2x 1199w,
+                         {f:uri.image(image: file, cropVariant: 'default')} 1200w
+                        "
+                    >
+                        <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, dimensions: dimensions, settings: settings}" /><i class="threeme-ui-enlarge fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></i>
+                    </a>
+                </f:then>
+                <f:else>
+                    <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, dimensions: dimensions, settings: settings}" />
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
+    <f:if condition="{file.description}">
+        <figcaption class="image-caption">
+            {file.description}
+        </figcaption>
+    </f:if>
+</figure>
+</html>

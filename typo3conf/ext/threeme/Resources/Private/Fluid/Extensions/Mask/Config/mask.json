@@ -1,0 +1,810 @@
+{
+    "tt_content": {
+        "elements": {
+            "threeme-carousel": {
+                "label": "Karussell & Banner",
+                "key": "threeme-carousel",
+                "shortLabel": "",
+                "description": "Karussell & Banner mit Text-\/Bildelementen. Automatische Unterscheidung zwischen Slider und Banner bei Verwendung von nur einem Element.",
+                "icon": "fa-desktop",
+                "color": "#7395c0",
+                "columns": [
+                    "tx_mask_carousel",
+                    "header",
+                    "header_layout",
+                    "tx_mask_interval",
+                    "tx_mask_item"
+                ],
+                "labels": [
+                    "Karussell",
+                    "",
+                    "",
+                    "Intervall: (null = kein automatischer Wechsel)",
+                    "Elemente"
+                ],
+                "options": {
+                    "8": "rte"
+                }
+            },
+            "threeme-flexbox": {
+                "label": "Flexbox",
+                "key": "threeme-flexbox",
+                "shortLabel": "",
+                "description": "Flexible Layout-Boxen mit Text-\/Bildinhalten. Die Anzahl der Boxen und Aufteilung in Spalten ist variabel.",
+                "icon": "fa-th",
+                "color": "#7395c0",
+                "columns": [
+                    "tx_mask_teaser",
+                    "header",
+                    "header_layout",
+                    "tx_mask_columns",
+                    "tx_mask_flexbox"
+                ],
+                "labels": [
+                    "Flexbox",
+                    "",
+                    "",
+                    "Spalten:",
+                    "Elemente"
+                ],
+                "options": {
+                    "9": "rte"
+                }
+            },
+            "threeme-gallery": {
+                "label": "Mediengalerie",
+                "key": "threeme-gallery",
+                "shortLabel": "",
+                "description": "Mediengalerie mit Lightbox. Das erste Bild wird als Vorschau angezeigt, alle weiteren in der Lightbox. Bildunterschriften erscheinen ebenso in der Lightbox.",
+                "icon": "fa-camera",
+                "color": "#7395c0",
+                "columns": [
+                    "tx_mask_gallery",
+                    "header",
+                    "header_layout",
+                    "assets"
+                ],
+                "labels": [
+                    "Mediengalerie",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "threeme-panel": {
+                "label": "Akkordeon",
+                "key": "threeme-panel",
+                "shortLabel": "",
+                "description": "Akkordeon mit Text-\/Bildinhalten",
+                "icon": "fa-list",
+                "color": "#7395c0",
+                "columns": [
+                    "tx_mask_accordion",
+                    "header",
+                    "header_layout",
+                    "tx_mask_panel"
+                ],
+                "labels": [
+                    "Akkordeon",
+                    "",
+                    "",
+                    "Elemente"
+                ],
+                "options": {
+                    "6": "rte"
+                }
+            },
+            "threeme-plyr": {
+                "label": "Medienspieler",
+                "key": "threeme-plyr",
+                "shortLabel": "",
+                "description": "Video- und Audio-Player mit optionalen Vorschaubild und Untertitel",
+                "icon": "fa-film",
+                "color": "#7395c0",
+                "columns": [
+                    "tx_mask_general",
+                    "header",
+                    "header_layout",
+                    "tx_mask_type",
+                    "tx_mask_media",
+                    "image",
+                    "assets",
+                    "tx_mask_subscription",
+                    "header_link",
+                    "sys_language_uid",
+                    "accessibility_title"
+                ],
+                "labels": [
+                    "Allgemein",
+                    "",
+                    "",
+                    "Medienart:",
+                    "Medien",
+                    "Vorschau:",
+                    "",
+                    "Untertitel",
+                    "Video Text Track (WebVTT):",
+                    "",
+                    "Bezeichung:"
+                ]
+            }
+        },
+        "sql": {
+            "tx_mask_interval": {
+                "tt_content": {
+                    "tx_mask_interval": "tinytext"
+                }
+            },
+            "tx_mask_item": {
+                "tt_content": {
+                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_columns": {
+                "tt_content": {
+                    "tx_mask_columns": "tinytext"
+                }
+            },
+            "tx_mask_flexbox": {
+                "tt_content": {
+                    "tx_mask_flexbox": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_panel": {
+                "tt_content": {
+                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_type": {
+                "tt_content": {
+                    "tx_mask_type": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_carousel": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "carousel"
+            },
+            "tx_mask_interval": {
+                "config": {
+                    "type": "input",
+                    "eval": "int",
+                    "default": "0",
+                    "placeholder": "",
+                    "size": "5",
+                    "max": "5",
+                    "range": {
+                        "lower": "0",
+                        "upper": "99999"
+                    }
+                },
+                "exclude": "1",
+                "key": "interval"
+            },
+            "tx_mask_item": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "bottom",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "10",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "item"
+            },
+            "tx_mask_teaser": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "teaser"
+            },
+            "tx_mask_columns": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "1 Spalte",
+                            "1"
+                        ],
+                        [
+                            "2 Spalten",
+                            "2"
+                        ],
+                        [
+                            "3 Spalten",
+                            "3"
+                        ],
+                        [
+                            "4 Spalten",
+                            "4"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "columns"
+            },
+            "tx_mask_flexbox": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "bottom",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "tx_mask_title",
+                "inlineIcon": "",
+                "key": "flexbox"
+            },
+            "tx_mask_gallery": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "gallery"
+            },
+            "tx_mask_accordion": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "accordion"
+            },
+            "tx_mask_panel": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "bottom",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "2",
+                    "maxitems": "20",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "panel"
+            },
+            "tx_mask_general": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "general"
+            },
+            "tx_mask_type": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "Lokales Video",
+                            "video"
+                        ],
+                        [
+                            "Lokales Audio",
+                            "audio"
+                        ],
+                        [
+                            "Eingebundenes Video",
+                            "embed"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "type"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "media"
+            },
+            "tx_mask_subscription": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "subscription"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_image": {
+                "sys_file_reference": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tx_mask_item": {
+        "sql": {
+            "tx_mask_title": {
+                "tx_mask_item": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_item": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_caption": {
+                "tx_mask_item": {
+                    "tx_mask_caption": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_item": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "Inhalt",
+                "key": "content"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Titel:",
+                "key": "title"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Link:",
+                "key": "link"
+            },
+            "tx_mask_caption": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Text:",
+                "rte": "1",
+                "key": "caption"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "Medien:",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_flexbox": {
+        "sql": {
+            "tx_mask_layout": {
+                "tx_mask_flexbox": {
+                    "tx_mask_layout": "tinytext"
+                }
+            },
+            "tx_mask_title": {
+                "tx_mask_flexbox": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_flexbox": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_bodytext": {
+                "tx_mask_flexbox": {
+                    "tx_mask_bodytext": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_flexbox": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Inhalt",
+                "key": "content"
+            },
+            "tx_mask_layout": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "Breite: Automatisch",
+                            "0"
+                        ],
+                        [
+                            "Breite: 100%",
+                            "100"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Layout:",
+                "key": "layout"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Titel:",
+                "key": "title"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Link:",
+                "key": "link"
+            },
+            "tx_mask_bodytext": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Text:",
+                "rte": "1",
+                "key": "bodytext"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Medien:",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_panel": {
+        "sql": {
+            "tx_mask_title": {
+                "tx_mask_panel": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_bodytext": {
+                "tx_mask_panel": {
+                    "tx_mask_bodytext": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_panel": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Inhalt",
+                "key": "content"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_panel",
+                "label": "Titel:",
+                "key": "title"
+            },
+            "tx_mask_bodytext": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_panel",
+                "label": "Text:",
+                "rte": "1",
+                "key": "bodytext"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "0",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Medien:",
+                "key": "image"
+            }
+        }
+    }
+}

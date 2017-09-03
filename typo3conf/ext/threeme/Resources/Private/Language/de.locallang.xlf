@@ -1,0 +1,94 @@
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="skiptocontent.label">
+                <source>Skip to main content</source>
+                <target>Direkt zu den Inhalten springen</target>
+            </trans-unit>
+            <trans-unit id="navbar.toggle.label">
+                <source>Toggle navigation</source>
+                <target>Navigation ein- und ausschalten</target>
+            </trans-unit>
+
+            <trans-unit id="logo.label">
+                <source>Back to home</source>
+                <target>Zur Startseite</target>
+            </trans-unit>
+
+            <trans-unit id="pagination.current.label">
+                <source>Current page</source>
+                <target>(aktuelle Seite)</target>
+            </trans-unit>
+            <trans-unit id="pagination.page.label">
+                <source>Page</source>
+                <target>Seite</target>
+            </trans-unit>
+
+            <trans-unit id="carousel.prev.label">
+                <source>Backwards</source>
+                <target>Vorheriges Motiv</target>
+            </trans-unit>
+            <trans-unit id="carousel.next.label">
+                <source>Forwards</source>
+                <target>Nächstes Motiv</target>
+            </trans-unit>
+
+            <trans-unit id="print.title">
+                <source>Print page</source>
+                <target>Inhalte drucken</target>
+            </trans-unit>
+            <trans-unit id="totop.title">
+                <source>To top</source>
+                <target>Seitenanfang</target>
+            </trans-unit>
+            <trans-unit id="sitemap.title">
+                <source>Sitemap</source>
+                <target>Seitenübersicht</target>
+            </trans-unit>
+            <trans-unit id="image.clickenlarge.title">
+                <source>Click to enlarge image</source>
+                <target>Klicken, um Bild vergrößert zu sehen</target>
+            </trans-unit>
+            <trans-unit id="image.clicklink.title">
+                <source>Click to open link</source>
+                <target>Klicken, um Link zu öffnen</target>
+            </trans-unit>
+
+            <trans-unit id="menu.breadcrumb.title">
+                <source>Go to page:</source>
+                <target>Zur Seite:</target>
+            </trans-unit>
+            <trans-unit id="menu.breadcrumb.current.title">
+                <source>Your are here:</source>
+                <target>Sie befinden sich hier:</target>
+            </trans-unit>
+            <trans-unit id="menu.language.label">
+                <source>Language</source>
+                <target>Sprache</target>
+            </trans-unit>
+
+            <trans-unit id="search.sword.placeholder">
+                <source>Enter search word</source>
+                <target>Suchbegriff eingeben</target>
+            </trans-unit>
+            <trans-unit id="search.submit.label">
+                <source>Search</source>
+                <target>Suche</target>
+            </trans-unit>
+            
+            <trans-unit id="cookiebar.label">
+                <source>This site uses cookies to make your visit more efficient and to offer you more usability.</source>
+                <target>Diese Website verwendet Cookies, um Ihren Besuch effizienter zu machen und Ihnen mehr Benutzerfreundlichkeit bieten zu können.</target>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.ok">
+                <source>OK</source>
+                <target>OK</target>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.info">
+                <source>Info</source>
+                <target>Info</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

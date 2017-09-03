@@ -1,0 +1,158 @@
+/*!
+ * Version note:
+ * Copied TS and Fluid from TYPO3 8.7
+ */
+.ce-align-left { text-align: left; }
+.ce-align-center { text-align: center; }
+.ce-align-right { text-align: right; }
+
+.ce-table td, .ce-table th { vertical-align: top; }
+
+.ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div { overflow: hidden; }
+
+.ce-left .ce-gallery, .ce-column { float: left; }
+.ce-center .ce-outer { position: relative; float: right; right: 50%; }
+.ce-center .ce-inner { position: relative; float: right; right: -50%; }
+.ce-right .ce-gallery { float: right; }
+
+.ce-gallery {
+    figure {
+        display: table;
+        margin: 0;
+    }
+
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        margin-bottom: ($padding-large-vertical * 2);
+        padding-top: $padding-small-vertical;
+        font-size: $font-size-small;
+        color: $gray-dark;
+    }
+
+    img { display: block; }
+    iframe { border-width: 0; }
+}
+
+.ce-border {
+    img,
+    iframe {
+        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-border-color, 0);
+        padding: 0;
+    }
+}
+
+//.ce-intext.ce-right .ce-gallery,
+//.ce-intext.ce-left .ce-gallery,
+//.ce-above .ce-gallery {
+//    margin-bottom: 10px;
+//}
+
+.ce-intext.ce-right .ce-gallery {
+    margin-left: 10px;
+}
+
+.ce-intext.ce-left .ce-gallery {
+    margin-right: 10px;
+}
+
+.ce-below .ce-gallery {
+    margin-top: 10px;
+}
+
+.ce-column {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.ce-row {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ce-above .ce-bodytext {
+    clear: both;
+}
+
+.ce-intext.ce-left ol, .ce-intext.ce-left ul {
+    padding-left: 40px;
+    overflow: auto;
+}
+
+/* Headline */
+.ce-headline-left { text-align: left; }
+.ce-headline-center { text-align: center; }
+.ce-headline-right { text-align: right; }
+
+/* Uploads */
+.ce-uploads {
+    margin: 0 0 ($padding-base-horizontal * 2) 0;
+    padding: $padding-base-horizontal 0 0 0;
+    @include threeme-border(1px 0 0 0, $threeme-border-style, $threeme-border-color, 0);
+
+    li {
+        list-style: none;
+        margin: 0 0 $padding-base-horizontal 0;
+        padding: 0 0 $padding-base-horizontal 0;
+        @include threeme-border(0 0 1px 0, $threeme-border-style, $threeme-border-color, 0);
+
+        .ce-uploads-description {
+            display: block;
+            margin-bottom: $padding-base-horizontal;
+        }
+    }
+}
+
+/* Table */
+*/ Replaced by Bootstrap definitions */
+/*
+.ce-table { width: 100%; max-width: 100%; }
+.ce-table th, .ce-table td { padding: 0.5em 0.75em; vertical-align: top; }
+.ce-table thead th { border-bottom: 2px solid #dadada; }
+.ce-table th, .ce-table td { border-top: 1px solid #dadada; }
+.ce-table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0,0,0,.05); }
+.ce-table-bordered th, .ce-table-bordered td { border: 1px solid #dadada; }
+*/
+
+/*
+    Shit fucking CSC backport !!! Do your job, do it right. Forget the fucking old shit, focus at the new !!!
+    The most dragging down idea of 8.7: Bringing back the old stuff of CSC and tell everybody this is a fucking amazing feature ...
+*/
+
+/* Space */
+.frame-space-before-extra-small { margin-top: $padding-large-vertical; }
+.frame-space-before-small { margin-top: ($padding-large-vertical * 2); }
+.frame-space-before-medium { margin-top: ($padding-large-vertical * 3); }
+.frame-space-before-large { margin-top: ($padding-large-vertical * 4); }
+.frame-space-before-extra-large { margin-top: ($padding-large-vertical * 5); }
+.frame-space-after-extra-small { margin-bottom: $padding-large-vertical; }
+.frame-space-after-small { margin-bottom: ($padding-large-vertical * 2); }
+.frame-space-after-medium { margin-bottom: ($padding-large-vertical * 3); }
+.frame-space-after-large { margin-bottom: ($padding-large-vertical * 4); }
+.frame-space-after-extra-large { margin-bottom: ($padding-large-vertical * 5); }
+
+/* Frame */
+.frame-ruler-before:before {
+    content: '';
+    display: block;
+    margin-bottom: ($padding-large-vertical * 2);
+    @include threeme-border(1px 0 0 0, $threeme-border-style, $threeme-border-color, 0);
+}
+
+.frame-ruler-after:after {
+    content: '';
+    display: block;
+    margin-top: ($padding-large-vertical * 2);
+    @include threeme-border(0 0 1px 0, $threeme-border-style, $threeme-border-color, 0);
+}
+
+.frame-indent { margin-left: 15%; margin-right: 15%; }
+.frame-indent-left { margin-left: 33%; }
+.frame-indent-right { margin-right: 33%; }

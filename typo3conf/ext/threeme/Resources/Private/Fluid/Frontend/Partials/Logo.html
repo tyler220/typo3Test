@@ -1,0 +1,10 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+<f:comment>@TODO: sys_language_uid in Link</f:comment>
+<f:link.page pageUid="{threeme:constant(constant:'threeme.frontend.pidHome')}" class="navbar-brand {f:if(condition:'{print}', then:'visible-print')}" title="{f:translate(key: 'logo.label', extensionName: 'threeme')}">
+    <f:image src="{f:uri.image(src:'{threeme:constant(constant:\'threeme.frontend.logo\')}')}" class="threeme-navbar-logo" title="" />
+    <span class="sr-only">{siteTitle}</span>
+</f:link.page>
+</html>

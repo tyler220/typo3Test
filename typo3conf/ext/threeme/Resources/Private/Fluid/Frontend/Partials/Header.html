@@ -1,0 +1,28 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:comment>
+    FancyBox v3.1:
+    Opening/closing causes fixed element to jump
+    Simply add compensate-for-scrollbar CSS class to your fixed positioned elements. Example of using Bootstrap navbar component:
+    < nav class="navbar navbar-inverse navbar-fixed-top compensate-for-scrollbar" >
+</f:comment>
+
+<header class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">{f:translate(key: 'navbar.toggle.label', extensionName: 'threeme')}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <f:render partial="Logo" arguments="{_all}" />
+        </div>
+
+        <nav class="collapse navbar-collapse navbar-main-collapse">
+            <f:cObject typoscriptObjectPath="menu.navbar" />
+        </nav>
+    </div>
+</header>
+</html>

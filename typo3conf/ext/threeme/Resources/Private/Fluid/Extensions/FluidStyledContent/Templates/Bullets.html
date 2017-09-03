@@ -1,0 +1,44 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="HeaderContentFooter" />
+
+<f:section name="content">
+    <f:if condition="{bullets}">
+        <f:switch expression="{data.bullets_type}">
+            <f:case value="0">
+                <ul {f:if(condition:'{data.layout} == 200', then:'class="list-unstyled"')} {f:if(condition:'{data.layout} == 201', then:'class="list-inline"')}>
+                    <f:for each="{bullets}" as="bullet">
+                        <li>{bullet}</li>
+                    </f:for>
+                </ul>
+            </f:case>
+
+            <f:case value="1">
+                <ol>
+                    <f:for each="{bullets}" as="bullet">
+                        <li>{bullet}</li>
+                    </f:for>
+                </ol>
+            </f:case>
+
+            <f:case value="2">
+                <dl class="dl-horizontal">
+                    <f:for each="{bullets}" as="definitionListItem">
+                        <f:for each="{definitionListItem}" as="termDescription" iteration="termDescriptionIterator">
+                            <f:if condition="{termDescriptionIterator.isFirst}">
+                                <f:then>
+                                    <dt>{termDescription}</dt>
+                                </f:then>
+                                <f:else>
+                                    <dd>{termDescription}</dd>
+                                </f:else>
+                            </f:if>
+                        </f:for>
+                    </f:for>
+                </dl>
+            </f:case>
+        </f:switch>
+    </f:if>
+</f:section>
+</html>

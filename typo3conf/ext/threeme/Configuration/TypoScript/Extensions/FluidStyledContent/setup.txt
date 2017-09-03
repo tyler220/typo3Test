@@ -1,0 +1,10 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from TYPO3 8.7.0
+# #################################################
+
+# Include static from extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+
+# Moved to Threeme SASS -> Resources/Private/Sass/Extensions/FluidStyledContent
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Styling/setup.txt">

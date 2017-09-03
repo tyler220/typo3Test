@@ -1,0 +1,75 @@
+.threeme-flexbox {
+    display: -webkit-flex;
+    display: flex;
+
+    margin-left: -($grid-gutter-width / 2);
+    margin-right: -($grid-gutter-width / 2);
+
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    @media (min-width: $grid-float-breakpoint) {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+
+    -webkit-align-content: stretch;
+    align-content: stretch;
+
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
+    .tfb-item {
+        margin-left: ($grid-gutter-width / 2);
+        margin-right: ($grid-gutter-width / 2);
+        margin-bottom: ($padding-large-vertical * 2);
+
+        -webkit-flex: 1 1 auto;
+        // IE11 Fix, https://github.com/philipwalton/flexbugs
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+        @media (min-width: $grid-float-breakpoint) {
+            &.tfb-column-2 {
+                -webkit-flex: 1 1 calc(50% - #{$grid-gutter-width});
+                flex-basis: calc(50% - #{$grid-gutter-width});
+            }
+
+            &.tfb-column-3 {
+                -webkit-flex: 1 1 calc(33.3% - #{$grid-gutter-width});
+                flex-basis: calc(33.3% - #{$grid-gutter-width});
+            }
+
+            &.tfb-column-4 {
+                -webkit-flex: 1 1 calc(25% - #{$grid-gutter-width});
+                flex-basis: calc(25% - #{$grid-gutter-width});
+            }
+
+            &.tfb-layout-100 {
+                -webkit-flex: 1 1 calc(100% - #{$grid-gutter-width});
+                flex-basis: calc(100% - #{$grid-gutter-width});
+            }
+        }
+
+        .tfb-image {
+            margin-bottom: $padding-large-vertical;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-color;
+            }
+        }
+    }
+}

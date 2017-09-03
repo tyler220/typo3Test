@@ -1,0 +1,49 @@
+{
+  "name": "threeme/threeme",
+  "type": "typo3-cms-extension",
+  "description": "Kickstart your TYPO3 project with Threeme. The distribution focus on rapid Frontend development and preconfigurated Backend with low entrylevel for editors.",
+  "keywords": [
+    "TYPO3",
+    "distribution",
+    "kickstarter",
+    "frontend",
+    "developer",
+    "editor"
+  ],
+  "homepage": "https://www.threeme.de",
+  "support": {
+    "issues": "https://github.com/AstCommodore/threeme/issues"
+  },
+  "authors": [
+    {
+      "name": "André Steiling",
+      "email": "andre@threeme.de",
+      "role": "Developer"
+    }
+  ],
+  "license": ["GPL-2.0+"],
+  "require": {
+    "typo3/cms-core": "~8.7.0,<8.7.99",
+    "typo3/cms-fluid-styled-content": "^8.7",
+    "typo3/cms-form": "^8.7",
+    "typo3-ter/ws-scss": "^1.1",
+    "mask/mask": "^3.0"
+  },
+  "suggest": {
+    "georgringer/news": "^6.0",
+    "spooner-web/be_secure_pw": "^8.0",
+    "dmitryd/typo3-realurl": "^2.2",
+    "dmitryd/typo3-dd-googlesitemap": "^2.1",
+    "instituteweb/min": "^1.3",
+    "helhum/typo3-console": "^4.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "THREEME\\Threeme\\": "Classes/"
+    }
+  },
+  "replace": {
+    "threeme": "self.version",
+    "typo3-ter/threeme": "self.version"
+  }
+}

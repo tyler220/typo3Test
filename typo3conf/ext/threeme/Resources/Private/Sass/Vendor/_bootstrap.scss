@@ -1,0 +1,80 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+
+// Core variables and mixins
+// ATTANTION: Import a copy of modifed Bootstrap variables from ./Library/
+//@import "Bootstrap/variables";
+@import "Bootstrap/mixins";
+
+// Reset and dependencies
+@import "Bootstrap/normalize";
+//@import "Bootstrap/print"; // Got its own CSS
+//@import "Bootstrap/glyphicons";
+
+// Core CSS
+@import "Bootstrap/scaffolding";
+@import "Bootstrap/type";
+//@import "Bootstrap/code";
+@import "Bootstrap/grid";
+@import "Bootstrap/tables";
+@import "Bootstrap/forms";
+@import "Bootstrap/buttons";
+
+// Components
+@import "Bootstrap/component-animations";
+//@import "Bootstrap/dropdowns";
+//@import "Bootstrap/button-groups";
+@import "Bootstrap/input-groups";
+@import "Bootstrap/navs";
+@import "Bootstrap/navbar";
+@import "Bootstrap/breadcrumbs";
+//@import "Bootstrap/pagination";
+//@import "Bootstrap/pager";
+//@import "Bootstrap/labels";
+//@import "Bootstrap/badges";
+//@import "Bootstrap/jumbotron";
+@import "Bootstrap/thumbnails";
+//@import "Bootstrap/alerts";
+//@import "Bootstrap/progress-bars";
+//@import "Bootstrap/media";
+//@import "Bootstrap/list-group";
+@import "Bootstrap/panels";
+@import "Bootstrap/responsive-embed";
+//@import "Bootstrap/wells";
+//@import "Bootstrap/close";
+
+// Components w/ JavaScript
+//@import "Bootstrap/modals";
+//@import "Bootstrap/tooltip";
+//@import "Bootstrap/popovers";
+@import "Bootstrap/carousel";
+
+// Utility classes
+@import "Bootstrap/utilities";
+@import "Bootstrap/responsive-utilities";

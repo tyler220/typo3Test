@@ -1,0 +1,127 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="class.text-left">
+                <source>Text: Left</source>
+                <target>Text: Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="class.text-right">
+                <source>Text: Right</source>
+                <target>Text: Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="class.text-center">
+                <source>Text: Center</source>
+                <target>Text: Zentriert</target>
+            </trans-unit>
+            <trans-unit id="class.text-justify">
+                <source>Text: Justify</source>
+                <target>Text: Blocksatz</target>
+            </trans-unit>
+            <trans-unit id="class.text-uppercase">
+                <source>Text: Uppercase</source>
+                <target>Text: Versalien</target>
+            </trans-unit>
+            <trans-unit id="class.lead">
+                <source>Text: Lead</source>
+                <target>Text: Einleitung</target>
+            </trans-unit>
+            <trans-unit id="class.threeme-text-small">
+                <source>Text: Small</source>
+                <target>Text: Klein</target>
+            </trans-unit>
+            <trans-unit id="class.threeme-text-note">
+                <source>Text: Note</source>
+                <target>Text: Anmerkung</target>
+            </trans-unit>
+
+            <trans-unit id="class.table">
+                <source>Table: Unstyled</source>
+                <target>Tabelle: Ohne Auszeichnung</target>
+            </trans-unit>
+            <trans-unit id="class.table-striped">
+                <source>Table: Striped rows</source>
+                <target>Tabelle: Gestreift</target>
+            </trans-unit>
+            <trans-unit id="class.table-bordered">
+                <source>Table: Bordered table</source>
+                <target>Tabelle: Umrandet</target>
+            </trans-unit>
+            <trans-unit id="class.table-hover">
+                <source>Table: Hover rows</source>
+                <target>Tabelle: Hervorgehoben</target>
+            </trans-unit>
+            <trans-unit id="class.table-condensed">
+                <source>Table: Condensed table</source>
+                <target>Tabelle: Kompakt</target>
+            </trans-unit>
+
+            <trans-unit id="class.list-unstyled">
+                <source>Lists: Unstyled</source>
+                <target>Liste: Ohne Auszeichnung</target>
+            </trans-unit>
+            <trans-unit id="class.list-inline">
+                <source>Lists: Inline</source>
+                <target>Liste: In Reihe</target>
+            </trans-unit>
+
+            <trans-unit id="class.internal-link">
+                <source>Link: Internal page</source>
+                <target>Link: Interne Seite</target>
+            </trans-unit>
+            <trans-unit id="class.external-link">
+                <source>Link: External page</source>
+                <target>Link: Externe Seite</target>
+            </trans-unit>
+            <trans-unit id="class.mail">
+                <source>Link: Mail</source>
+                <target>Link: E-Mail Adresse</target>
+            </trans-unit>
+            <trans-unit id="class.download">
+                <source>Link: Download</source>
+                <target>Link: Download</target>
+            </trans-unit>
+            <trans-unit id="class.lightbox">
+                <source>Link: Lightbox</source>
+                <target>Link: Lightbox</target>
+            </trans-unit>
+
+            <trans-unit id="class.btn-default">
+                <source>Buttons: Default</source>
+                <target>Button</target>
+            </trans-unit>
+            <trans-unit id="class.btn-primary">
+                <source>Buttons: Primary</source>
+                <target>Button: Hauptfarbe</target>
+            </trans-unit>
+            <trans-unit id="class.btn-success">
+                <source>Buttons: Success</source>
+                <target>Button: Grün</target>
+            </trans-unit>
+            <trans-unit id="class.btn-info">
+                <source>Buttons: Info</source>
+                <target>Button: Blau</target>
+            </trans-unit>
+            <trans-unit id="class.btn-warning">
+                <source>Buttons: Warning</source>
+                <target>Button: Orange</target>
+            </trans-unit>
+            <trans-unit id="class.btn-danger">
+                <source>Buttons: Danger</source>
+                <target>Button: Rot</target>
+            </trans-unit>
+            <trans-unit id="class.btn-lg">
+                <source>Buttons: Large</source>
+                <target>Button: Groß</target>
+            </trans-unit>
+            <trans-unit id="class.btn-sm">
+                <source>Buttons: Small</source>
+                <target>Button: Klein</target>
+            </trans-unit>
+            <trans-unit id="class.btn-xs">
+                <source>Buttons: Extra small</source>
+                <target>Button: Extraklein</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

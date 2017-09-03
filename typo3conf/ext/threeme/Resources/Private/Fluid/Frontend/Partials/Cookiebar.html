@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+<div class="threeme-cookiebar">
+    <p>
+        {f:translate(key: 'cookiebar.label', extensionName: 'threeme')}
+
+        <a class="threeme-cookiebar-close btn btn-success" href>{f:translate(key: 'cookiebar.btn.ok', extensionName: 'threeme')}</a>
+
+        <f:link.page pageUid="{threeme:constant(constant:'threeme.frontend.pidPrivacy')}" class="btn btn-info">
+            {f:translate(key: 'cookiebar.btn.info', extensionName: 'threeme')}
+        </f:link.page>
+    </p>
+</div>
+</html>

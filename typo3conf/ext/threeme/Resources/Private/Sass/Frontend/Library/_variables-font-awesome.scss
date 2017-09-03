@@ -1,0 +1,33 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Font Awesome variables
+ *
+ * Copied from the original vendor "_variables.scss" to leave the source untouched.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+$fa-font-path:        "/typo3conf/ext/threeme/Resources/Public/Fonts/Vendor/FontAwesome";
+$fa-font-size-base:   $font-size-base;
+$fa-border-color:     $threeme-border-color;
+$fa-inverse:          $threeme-white;

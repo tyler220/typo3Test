@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="{fluidLayoutSection}" />
+
+<f:section name="Website">
+    <div class="threeme-carousel">
+        <!--TYPO3SEARCH_begin-->
+        <f:cObject typoscriptObjectPath="lib.threemeDynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+        <!--TYPO3SEARCH_end-->
+    </div>
+
+    <main id="threeme-main" class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <f:cObject typoscriptObjectPath="menu.breadcrumb" />
+                <!--TYPO3SEARCH_begin-->
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+                <!--TYPO3SEARCH_end-->
+            </div>
+        </div>
+    </main>
+
+    <f:if condition="{f:cObject(typoscriptObjectPath:'menu.navlist')}">
+        <nav class="nav-list-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <f:cObject typoscriptObjectPath="menu.navlist" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </f:if>
+</f:section>
+
+
+<f:section name="Lightbox">
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!--TYPO3SEARCH_begin-->
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+                <!--TYPO3SEARCH_end-->
+            </div>
+        </div>
+    </main>
+</f:section>
+</html>

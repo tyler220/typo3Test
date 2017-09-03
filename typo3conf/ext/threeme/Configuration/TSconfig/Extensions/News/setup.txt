@@ -1,0 +1,12 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:news 5.3.2
+# #################################################
+
+# Template Selector Example
+# See https://docs.typo3.org/typo3cms/extensions/news/AdministratorManual/Templates/TemplateSelector/Index.html
+
+#tx_news.templateLayouts {
+#    1 = A custom layout
+#    99 = LLL:fileadmin/somelocallang/locallang.xlf:someTranslation
+#}

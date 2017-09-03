@@ -1,0 +1,74 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="skiptocontent.label">
+                <source>Skip to main content</source>
+            </trans-unit>
+            <trans-unit id="navbar.toggle.label">
+                <source>Toggle navigation</source>
+            </trans-unit>
+
+            <trans-unit id="logo.label">
+                <source>Back to home</source>
+            </trans-unit>
+
+            <trans-unit id="pagination.current.label">
+                <source>(current page)</source>
+            </trans-unit>
+            <trans-unit id="pagination.page.label">
+                <source>Page</source>
+            </trans-unit>
+
+            <trans-unit id="carousel.prev.label">
+                <source>Backwards</source>
+            </trans-unit>
+            <trans-unit id="carousel.next.label">
+                <source>Forwards</source>
+            </trans-unit>
+
+            <trans-unit id="print.title">
+                <source>Print page</source>
+            </trans-unit>
+            <trans-unit id="totop.title">
+                <source>To top</source>
+            </trans-unit>
+            <trans-unit id="sitemap.title">
+                <source>Sitemap</source>
+            </trans-unit>
+            <trans-unit id="image.clickenlarge.title">
+                <source>Click to enlarge image</source>
+            </trans-unit>
+            <trans-unit id="image.clicklink.title">
+                <source>Click to open link</source>
+            </trans-unit>
+
+            <trans-unit id="menu.breadcrumb.title">
+                <source>Go to page:</source>
+            </trans-unit>
+            <trans-unit id="menu.breadcrumb.current.title">
+                <source>Your are here:</source>
+            </trans-unit>
+            <trans-unit id="menu.language.label">
+                <source>Language</source>
+            </trans-unit>
+
+            <trans-unit id="search.sword.placeholder">
+                <source>Enter search word</source>
+            </trans-unit>
+            <trans-unit id="search.submit.label">
+                <source>Search</source>
+            </trans-unit>
+            
+            <trans-unit id="cookiebar.label">
+                <source>This site uses cookies to make your visit more efficient and to offer you more usability.</source>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.ok">
+                <source>OK</source>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.info">
+                <source>Info</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,123 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom styles
+ * -------------------------------------------------------------------------------------------------
+ */
+
+// Style RTE classes
+.internal-link {
+    .threeme-ui-internal-link {
+        @extend .fa-angle-right;
+    }
+}
+
+.external-link {
+    .threeme-ui-external-link {
+        @extend .fa-external-link-square;
+    }
+}
+
+.mail {
+    .threeme-ui-mail {
+        @extend .fa-envelope-o;
+    }
+}
+
+.download {
+    .threeme-ui-download {
+        @extend .fa-download;
+    }
+}
+
+.lightbox {
+    .threeme-ui-lightbox {
+        @extend .fa-picture-o;
+    }
+}
+
+.threeme-ui-internal-link,
+.threeme-ui-external-link,
+.threeme-ui-mail,
+.threeme-ui-download,
+.threeme-ui-lightbox {
+    margin-right: $padding-xs-horizontal;
+}
+
+.threeme-ui-enlarge {
+    position: relative;
+    float: right;
+    margin: -25px $padding-small-horizontal 0 0;
+    padding: $padding-small-vertical $padding-xs-horizontal;
+    color: $text-color;
+    background-color: $threeme-white;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
+}
+
+.threeme-ui-totop {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
+
+    .icon {
+        @extend .fa-chevron-up;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
+    }
+}
+
+.threeme-ui-print {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
+
+    .icon {
+        @extend .fa-print;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
+    }
+}
+
+.threeme-ui-sitemap {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
+
+    .icon {
+        @extend .fa-sitemap;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
+    }
+}

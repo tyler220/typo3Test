@@ -1,0 +1,173 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom styles
+ * Theese styles demonstrate the color palette of the site.
+ * -------------------------------------------------------------------------------------------------
+ */
+.color-palette {
+    position: relative;
+    height: 200px;
+    margin-bottom: ($padding-large-vertical * 2);
+
+    .desc {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        color: $text-color;
+        text-align: center;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        background-color: $threeme-white;
+
+        @media(max-width: $screen-xs-min) {
+            font-size: $font-size-small;
+        }
+    }
+
+    &.primary-1 {
+        background-color: $brand-primary;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-primary, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-primary, 0);
+        }
+    }
+
+    &.primary-2 {
+        background-color: $brand-success;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-success, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-success, 0);
+        }
+    }
+
+    &.primary-3 {
+        background-color: $brand-info;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-info, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-info, 0);
+        }
+    }
+
+    &.primary-4 {
+        background-color: $brand-warning;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-warning, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-warning, 0);
+        }
+    }
+
+    &.primary-5 {
+        background-color: $brand-danger;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-danger, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-danger, 0);
+        }
+    }
+
+    &.secondary-1 {
+        background-color: $gray-darker;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-darker, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-darker, 0);
+        }
+    }
+
+    &.secondary-2 {
+        background-color: $gray-dark;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-dark, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-dark, 0);
+        }
+    }
+
+    &.secondary-3 {
+        background-color: $gray;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray, 0);
+        }
+    }
+
+    &.secondary-4 {
+        background-color: $gray-light;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-light, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-light, 0);
+        }
+    }
+
+    &.secondary-5 {
+        background-color: $gray-lighter;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-lighter, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-lighter, 0);
+        }
+    }
+
+    &.typo-1 {
+        background-color: $text-color;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $text-color, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $text-color, 0);
+        }
+    }
+
+    &.typo-2 {
+        background-color: $link-color;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $link-color, 0);
+        }
+    }
+
+    &.background-1 {
+        background-color: $body-bg;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-base, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-base, 0);
+        }
+    }
+
+    &.background-2 {
+        background-color: $threeme-white;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-base, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-base, 0);
+        }
+    }
+}

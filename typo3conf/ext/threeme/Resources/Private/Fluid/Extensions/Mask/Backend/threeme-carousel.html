@@ -1,0 +1,40 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+    <threeme:be.editLink element="{data}">
+        <f:if condition="{data.header}">
+            <h4>{data.header}</h4>
+        </f:if>
+
+        <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
+            <f:if condition="{dataItem.hidden} != 1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <f:if condition="{dataItem.tx_mask_title}">
+                            <f:then>
+                                {dataItem.tx_mask_title}
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{data.tx_mask_item -> f:count()} > 1">
+                                    <f:then>
+                                        Slide {dataIterator.cycle}
+                                    </f:then>
+                                    <f:else>
+                                        Banner
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                    <div class="panel-body">
+                        <f:image image="{dataItem.tx_mask_image.0}" maxWidth="200" />
+                    </div>
+                    <div class="panel-footer">
+                        <f:format.html>{dataItem.tx_mask_caption}</f:format.html>
+                    </div>
+                </div>
+            </f:if>
+        </f:for>
+    </threeme:be.editLink>
+</html>

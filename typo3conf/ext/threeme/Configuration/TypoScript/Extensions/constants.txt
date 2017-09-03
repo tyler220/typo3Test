@@ -1,0 +1,14 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FluidStyledContent/constants.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('felogin')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FeLogin/constants.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/IndexedSearch/constants.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/News/constants.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('powermail')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Powermail/constants.txt">
+[global]

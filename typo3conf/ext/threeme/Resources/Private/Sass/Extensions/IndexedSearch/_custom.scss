@@ -1,0 +1,24 @@
+.tx-indexedsearch-searchbox {
+    .form-horizontal {
+        margin-top: $padding-large-vertical;
+        margin-bottom: ($padding-large-vertical * 2);
+        padding-bottom: $padding-large-vertical;
+        @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-border-color, 0);
+    }
+}
+
+.tx-indexedsearch-res {
+    .tx-indexedsearch-info {
+        margin-bottom: 0;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.tx-indexedsearch-browsebox {
+    ul {
+        @extend .list-inline;
+    }
+}

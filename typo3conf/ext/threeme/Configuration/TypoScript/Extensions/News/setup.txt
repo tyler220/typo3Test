@@ -1,0 +1,108 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:news 6.0.0
+# #################################################
+
+# Include static from extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
+
+plugin.tx_news {
+    view {
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
+    }
+
+    _LOCAL_LANG {
+        de {
+            related-files = Weiterführende Downloads
+            paginate_next = Nächste Seite
+            paginate_previous = Vorherige Seite
+        }
+    }
+
+    settings {
+        displayDummyIfNoMedia = 0
+
+        analytics {
+            social {
+                facebookLike = 0
+                facebookShare = 0
+                twitter = 0
+            }
+        }
+
+        link {
+            hrDate = 0
+            hrDate {
+                day = j
+                month = n
+                year = Y
+            }
+        }
+
+        cropMaxCharacters = 300
+        orderBy = datetime
+        orderDirection = desc
+        topNewsFirst = 1
+
+        facebookLocale = {$threeme.language.default.isoCode}
+        googlePlusLocale = {$threeme.language.default.isoCodeShort}
+        disqusLocale = {$threeme.language.default.isoCodeShort}
+
+        detail {
+            showPrevNext = 0
+            showSocialShareButtons = 0
+
+            media {
+                image {
+                    maxWidth = 370
+                    maxHeight =
+                }
+                video {
+                    width = 400
+                    height = 300
+                }
+            }
+        }
+
+        list {
+            media {
+                image {
+                    maxWidth = 275
+                    maxHeight = 150
+                }
+            }
+
+            paginate {
+                itemsPerPage = 10
+                insertAbove = 0
+                insertBelow = 1
+                templatePath =
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+            }
+        }
+
+        opengraph {
+            site_name =
+            type = article
+            admins =
+            email =
+            phone_number =
+            fax_number =
+            latitude =
+            longitude =
+            street-address =
+            locality =
+            region =
+            postal-code =
+            country-name =
+
+            twitter {
+                card = {$plugin.tx_news.opengraph.twitter.card}
+                site =
+                creator = {$plugin.tx_news.opengraph.twitter.creator}
+            }
+        }
+    }
+}
+

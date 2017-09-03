@@ -1,0 +1,39 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:news 6.0.0
+# #################################################
+
+plugin.tx_news {
+    rss.channel {
+        title = {$threeme.meta.description}
+        description = {$threeme.meta.description}
+        link =
+        language = {$threeme.language.default.isoCode}
+        copyright = {$threeme.meta.copyright}
+        category =
+        generator = {$threeme.meta.author}
+    }
+
+    opengraph {
+        twitter {
+            card = summary
+            creator = {$threeme.meta.author}
+        }
+    }
+
+    view {
+        # cat=plugin.tx_news/file; type=string; label=Path to template root (FE)
+        templateRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/News/Templates
+
+        # cat=plugin.tx_news/file; type=string; label=Path to template partials (FE)
+        partialRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/News/Partials
+
+        # cat=plugin.tx_news/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/News/Layouts
+    }
+
+    settings {
+        # cat=plugin.tx_news/file; type=string; label=Path to CSS file
+        cssFile =
+    }
+}

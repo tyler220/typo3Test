@@ -1,0 +1,86 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:comment>
+    Support Frontend Editing by EXT:frontend_editing:
+    If you want to get Mask elements work with the new frontend editing, follow theese steps:
+
+    1. Add 'xmlns:feedit="http://typo3.org/ns/TYPO3/CMS/FrontendEditing/ViewHelpers"' as namespace to html tag
+    2. Wrap the whole Mask content below with < feedit:contentEditable table="tt_content" uid="{data.uid}">MASK ELEMENT< /feedit:contentEditable>
+    3. Beware of the spaces in the view helper -> '< feedit:' and '< /feedit:' -> this is for a vaild comment here, delete them! ;)
+</f:comment>
+
+
+<div id="c{data.uid}">
+    <f:if condition="{data.header}">
+        <f:switch expression="{data.header_layout}">
+            <f:case value="1">
+                <h1>{data.header}</h1>
+            </f:case>
+            <f:case value="2">
+                <h2>{data.header}</h2>
+            </f:case>
+            <f:case value="3">
+                <h3>{data.header}</h3>
+            </f:case>
+            <f:case value="4">
+                <h4>{data.header}</h4>
+            </f:case>
+            <f:case value="100">
+                <f:comment> -- do not show header -- </f:comment>
+            </f:case>
+            <f:case default="true">
+                <h2>{data.header}</h2>
+            </f:case>
+        </f:switch>
+    </f:if>
+
+    <div class="threeme-flexbox">
+        <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
+
+            <div class="tfb-item tfb-column-{data.tx_mask_columns} tfb-layout-{dataItem.tx_mask_layout}">
+                <f:if condition="{dataItem.tx_mask_image}">
+                    <div class="tfb-image">
+                        <f:link.typolink parameter="{dataItem.tx_mask_link}">
+                            <f:render partial="PictureSet" arguments="{file: dataItem.tx_mask_image.0, class:'img-responsive'}" />
+                        </f:link.typolink>
+                    </div>
+                </f:if>
+
+                <f:if condition="{dataItem.tx_mask_title}">
+                    <h3 class="tfb-header">
+                        <f:link.typolink parameter="{dataItem.tx_mask_link}">{dataItem.tx_mask_title}</f:link.typolink>
+                    </h3>
+                </f:if>
+
+                <f:if condition="{dataItem.tx_mask_bodytext}">
+                    <div class="tfb-bodytext">
+                        <f:format.html>{dataItem.tx_mask_bodytext}</f:format.html>
+                    </div>
+                </f:if>
+            </div>
+
+<f:comment>
+<!-- AST: If you want to wrap the flex items by rows, comment this in: -->
+
+            <f:if condition="{dataIterator.cycle} % {data.tx_mask_columns}">
+                <f:then>
+                </f:then>
+                <f:else>
+                    <f:if condition="{dataIterator.isLast}">
+                        <f:then>
+                        </f:then>
+                        <f:else>
+                            </div>
+                            <div class="threeme-flexbox">
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+</f:comment>
+
+        </f:for>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,28 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+<footer>
+    <div class="container">
+        <f:cObject typoscriptObjectPath="lib.link-to-top"/>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '300'}"/>
+            </div>
+            <div class="col-sm-6">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '302'}"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <f:cObject typoscriptObjectPath="menu.footer"/>
+            </div>
+        </div>
+    </div>
+
+    <f:if condition="{threeme:constant(constant:'threeme.frontend.enableCookiebar')}">
+        <f:render partial="Cookiebar" arguments="{_all}" />
+    </f:if>
+</footer>
+</html>

@@ -1,0 +1,149 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom styles
+ * -------------------------------------------------------------------------------------------------
+ */
+body {
+    position: relative;
+    overflow-y: scroll; // Force scrollbar to avoid page shifting
+
+    &.iframe {
+        overflow-y: auto;
+        background-image: none;
+        background-color: transparent;
+        filter: none;
+    }
+}
+
+.threeme-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $threeme-container-width;
+    background-color: $threeme-white;
+
+    main {
+        padding-top: ($padding-large-vertical * 2);
+        padding-bottom: ($padding-large-vertical * 5);
+    }
+}
+
+// Wrapping class for pages loaded by FancyBox lightbox
+.page-layout-lightbox {
+    padding: ($padding-large-vertical * 3) 0;
+}
+
+
+// Exception for main carousel/banner on page top
+@media (min-width: $grid-float-breakpoint) {
+    .threeme-carousel {
+        position: relative;
+        top: -$navbar-height;
+        z-index: 1;
+    }
+
+    #threeme-main {
+        margin-top: -$navbar-height;
+    }
+}
+
+
+// Exception for Backend-Layout 'Home'
+.backend-layout-home {
+    .navbar-inverse {
+        background-color: $gray-dark;
+
+        @media (min-width: $grid-float-breakpoint) {
+            background-color: transparent;
+
+            .navbar-brand {
+                padding-top: 23px;
+
+                .threeme-navbar-logo {
+                    width: auto;
+                    height: 70px;
+                }
+            }
+
+            .navbar-nav > li > a {
+                padding-top: ($navbar-padding-vertical + 20px);
+                padding-bottom: ($navbar-padding-vertical - 20px);
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: ($padding-large-vertical * 8);
+        @extend .h2;
+    }
+
+    h3 {
+        @extend .h5;
+        text-transform: uppercase;
+    }
+
+    .threeme-carousel {
+        margin-bottom: ($padding-large-vertical * 4);
+    }
+
+    .threeme-banner {
+        margin-bottom: ($padding-large-vertical * 8);
+    }
+
+    .threeme-flexbox {
+        margin-bottom: ($padding-large-vertical * 4);
+
+        .tfb-item {
+            .tfb-image {
+                text-align: center;
+
+                img {
+                    display: inline-block; // Set to inline-block for alignment
+                }
+            }
+
+            .tfb-header {
+                text-align: center;
+            }
+
+            .tfb-bodytext {
+                text-align: center;
+            }
+        }
+    }
+
+    @media(min-width: $screen-sm-min) {
+        .threeme-carousel {
+            margin-bottom: ($padding-large-vertical * 8);
+        }
+
+        .threeme-banner {
+            margin-bottom: ($padding-large-vertical * 16);
+        }
+
+        .threeme-flexbox {
+            margin-bottom: ($padding-large-vertical * 8);
+        }
+    }
+}

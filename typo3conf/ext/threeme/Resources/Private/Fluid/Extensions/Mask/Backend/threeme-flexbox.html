@@ -1,0 +1,28 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+    <threeme:be.editLink element="{data}">
+        <f:if condition="{data.header}">
+            <h4>{data.header}</h4>
+        </f:if>
+
+        <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
+            <f:if condition="{dataItem.hidden} != 1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {dataItem.tx_mask_title}
+                    </div>
+                    <div class="panel-body">
+                        <f:if condition="{dataItem.tx_mask_image.0}">
+                            <f:image image="{dataItem.tx_mask_image.0}" maxWidth="200" />
+                        </f:if>
+                    </div>
+                    <div class="panel-footer">
+                        <f:format.html>{dataItem.tx_mask_bodytext}</f:format.html>
+                    </div>
+                </div>
+            </f:if>
+        </f:for>
+    </threeme:be.editLink>
+</html>

@@ -1,0 +1,24 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor framework libraries.
+ *
+ *
+ * #2: Include paritals
+ * - Uncomment features as you need them, when your user stories demand the functionality.
+ * - If you need to modify a partial, create a new one in "Components" and include it after this one!
+ */
+
+
+/*!
+ * Website styles
+ * -------------------------------------------------------------------------------------------------
+ */
+.btn {
+    text-decoration: none;
+}

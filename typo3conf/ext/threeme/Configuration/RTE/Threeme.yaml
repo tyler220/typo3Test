@@ -1,0 +1,184 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+#
+# CKEditor Samples for easy entry see http://sdk.ckeditor.com/index.html
+editor:
+  config:
+    width: 800
+    height: 400
+    resize_enabled: true
+    resize_dir: 'both'
+    resize_minWidth: 600
+    resize_minHeight: 400
+
+    # the CSS file to be used inside the editor
+    contentsCss: "EXT:threeme/Resources/Public/Css/styles-rte.css"
+
+    stylesSet:
+      # Text
+      - { name: 'Text: Linksbündig', element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'p', 'td', 'th'], attributes: { 'class': 'text-left' } }
+      - { name: 'Text: Zentriert', element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'p', 'td', 'th'], attributes: { 'class': 'text-center' } }
+      - { name: 'Text: Rechtsbündig', element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'p', 'td', 'th'], attributes: { 'class': 'text-right' } }
+      - { name: 'Text: Blocksatz', element: 'p', attributes: { 'class': 'text-justify' } }
+      - { name: 'Text: Versalien', element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'p'], attributes: { 'class': 'text-uppercase' } }
+      - { name: 'Text: Einleitung', element: 'p', attributes: { 'class': 'lead' } }
+      - { name: 'Text: Klein', element: ['p, span'], attributes: { 'class': 'threeme-text-small' } }
+      - { name: 'Text: Anmerkung', element: ['p, span'], attributes: { 'class': 'threeme-text-note' } }
+
+      # Links
+      - { name: 'Link: Interne Seite', element: 'a', attributes: { 'class': 'internal-link' } }
+      - { name: 'Link: Externe Seite', element: 'a', attributes: { 'class': 'external-link' }  }
+      - { name: 'Link: E-Mail Adresse', element: 'a', attributes: { 'class': 'mail' }  }
+      - { name: 'Link: Download', element: 'a', attributes: { 'class': 'download' }  }
+      - { name: 'Link: Lightbox', element: 'a', attributes: { 'class': 'lightbox' } }
+
+      # Buttons
+      - { name: 'Button', element: 'a', attributes: { 'class': 'btn btn-default' } }
+      - { name: 'Button: Hauptfarbe', element: 'a', attributes: { 'class': 'btn btn-primary' } }
+      - { name: 'Button: Grün', element: 'a', attributes: { 'class': 'btn btn-success' } }
+      - { name: 'Button: Blau', element: 'a', attributes: { 'class': 'btn btn-info' } }
+      - { name: 'Button: Orange', element: 'a', attributes: { 'class': 'btn btn-warning' } }
+      - { name: 'Button: Rot', element: 'a', attributes: { 'class': 'btn btn-danger' } }
+
+      # Listen
+      - { name: 'Liste: Ohne Auszeichnung', element: 'ul', attributes: { 'class': 'list-unstyled' } }
+      - { name: 'Liste: In Reihe', element: 'ul', attributes: { 'class': 'list-inline' } }
+
+      #Tabellen
+      - { name: 'Tabelle: Ohne Auszeichnung', element: 'table', attributes: { 'class': 'table' } }
+      - { name: 'Tabelle: Gestreift', element: 'table', attributes: { 'class': 'table table-striped' } }
+      - { name: 'Tabelle: Umrandet', element: 'table', attributes: { 'class': 'table table-bordered' } }
+      - { name: 'Tabelle: Hervorgehoben', element: 'table', attributes: { 'class': 'table table-hover' } }
+      - { name: 'Tabelle: Kompakt', element: 'table', attributes: { 'class': 'table table-condensed' } }
+
+    # Default text formats
+    format_tags: "h1;h2;h3;h4;p"
+
+    # Disable content
+    disallowedContent: 'table[cellspacing,cellpadding,border,align]'
+
+    # Configure Toolbar, using the fancy configurator:
+    # http://ckeditor.com/latest/samples/toolbarconfigurator/index.html
+    toolbarGroups:
+      - { name: 'styles', groups: [ 'styles' ] }
+      - { name: 'clipboard', groups: [ 'clipboard', 'undo' ] }
+      - { name: 'tools', groups: [ 'tools' ] }
+      - { name: 'document', groups: [ 'mode', 'document', 'doctools' ] }
+      - '/'
+      - { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] }
+      - { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] }
+      - { name: 'links', groups: [ 'links' ] }
+      - { name: 'insert', groups: [ 'insert' ] }
+      - { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] }
+      - '/'
+      - { name: 'forms', groups: [ 'forms' ] }
+      - '/'
+      - { name: 'colors', groups: [ 'colors' ] }
+      - { name: 'others', groups: [ 'others' ] }
+      - { name: 'about', groups: [ 'about' ] }
+
+    # Remove buttons from groups above
+    removeButtons:
+      - Font
+      - FontSize
+      - TextColor
+      - BGColor
+      - ShowBlocks
+      - About
+      - Form
+      - Checkbox
+      - Radio
+      - TextField
+      - Textarea
+      - Select
+      - Button
+      - ImageButton
+      - HiddenField
+      - Save
+      - NewPage
+      - Preview
+      - Print
+      - Templates
+      - Superscript
+      - Subscript
+      - Strike
+      - Underline
+      - RemoveFormat
+      - CopyFormatting
+      - Language
+      - BidiRtl
+      - BidiLtr
+      - CreateDiv
+      - Blockquote
+      - Indent
+      - Outdent
+      - Anchor
+      - Flash
+      - Smiley
+      - PageBreak
+      - Iframe
+      - SpecialChar
+      - SelectAll
+
+    # Activate CKEditor plugins
+    extraPlugins:
+      - justify
+      - find
+      - autogrow
+
+    # Deactivate CKEditor plugins
+    removePlugins:
+      - image
+
+    # Configure CKEditor plugins
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+#
+buttons.:
+  link.:
+    targetSelector.:
+      disabled: 1
+
+    queryParametersSelector.:
+      enabled: 0
+
+    relAttribute.:
+      enabled: 0
+
+    properties.:
+      class.:
+        allowedClasses: internal-link, external-link, mail, download, lightbox
+
+    page.:
+      properties.:
+        class.:
+#          allowedClasses: internal-link, lightbox
+          default: internal-link
+
+    url.:
+      properties.:
+        class.:
+#          allowedClasses: external-link, lightbox
+          default: external-link
+
+    mail.:
+      properties.:
+        class.:
+#          allowedClasses: mail
+          default: mail
+
+    file.:
+      properties.:
+        class.:
+#          allowedClasses: download, lightbox
+          default: download

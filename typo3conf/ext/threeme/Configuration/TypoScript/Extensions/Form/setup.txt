@@ -1,0 +1,23 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from TYPO3 8.7.0
+# #################################################
+
+# Include static from extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:form/Configuration/TypoScript/setup.txt">
+
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            300 = EXT:threeme/Configuration/Yaml/Extensions/Form/setup.yaml
+        }
+    }
+}
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            300 = EXT:threeme/Configuration/Yaml/Extensions/Form/setup.yaml
+        }
+    }
+}

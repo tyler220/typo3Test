@@ -1,0 +1,67 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:alias map="{
+        cropMediaWidth: '{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imagewidth}c\', else:\'{dimensions.width}\')}',
+        cropMediaHeight: '{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imageheight}c\', else:\'{dimensions.height}\')}'
+    }"
+>
+
+    <picture>
+        <source
+            srcset="{f:uri.image(image: file, cropVariant: 'default')}"
+            media="(min-width: 1200px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: file, maxWidth: '1984', cropVariant: 'default')} 2x"
+            media="(min-width: 992px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'tablet')} 2x"
+            media="(min-width: 768px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'mobile')} 2x"
+            media="(max-width: 767px)"
+        >
+
+        <f:comment>
+            @TODO
+            v7.6 Threeme cropping feature:
+            Is this useful anymore? Or is the new cropping feature of v8.7 the better one?
+
+            width="{f:if(condition:'{data.imagewidth} > 0', then:'{cropMediaWidth}', else:'{dimensions.width}')}"
+            height="{f:if(condition:'{data.imageheight} > 0', then:'{cropMediaHeight}', else:'{dimensions.height}')}"
+        </f:comment>
+
+        <f:media
+            file="{file}"
+            width="{f:if(condition:'{data.imagewidth} > 0', then:'{cropMediaWidth}', else:'{dimensions.width}')}"
+            height="{f:if(condition:'{data.imageheight} > 0', then:'{cropMediaHeight}', else:'{dimensions.height}')}"
+            alt="{file.alternative}"
+            title="{file.title}"
+            class="{f:if(condition:'{data.imagewidth} == 0', then:'img-responsive')}{f:if(condition:'{data.layout}', then:' threeme-image-layout-{data.layout}')}"
+            cropVariant="default"
+        />
+    </picture>
+
+    <f:comment>
+        @NOTICE
+        Watermarked images:
+        Alternative implementation for watermarked image rendering.
+        Note: EXT 'filemetadata' has to be activated if you want to use additional media fields.
+
+        <f:cObject
+            typoscriptObjectPath="lib.threemeWatermarkedImage"
+            currentValueKey="uid"
+            data="{
+                uid: file.uid,
+                width: '{f:if(condition: \'{data.imagewidth} > 0\', then: \'{cropMediaWidth}\', else: \'{dimensions.width}\')}',
+                height: '{f:if(condition: \'{data.imageheight} > 0\', then: \'{cropMediaHeight}\', else: \'{dimensions.height}\')}',
+                alt: file.alternative,
+                title: file.title,
+                params: 'class=\"{f:if(condition:\'{data.layout}\', then:\'threeme-image-layout-{data.layout}\', else:\'img-responsive\')}\"',
+                watermark: column.media.properties.copyright
+            }"
+        />
+    </f:comment>
+</f:alias>
+</html>

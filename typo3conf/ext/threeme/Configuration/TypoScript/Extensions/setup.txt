@@ -1,0 +1,26 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FluidStyledContent/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('felogin')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FeLogin/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/IndexedSearch/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Form/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('mask')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Mask/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('min')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Min/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/News/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('powermail')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Powermail/setup.txt">
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('frontend_editing')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FrontendEditing/setup.txt">
+[global]

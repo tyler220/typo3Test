@@ -1,0 +1,33 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="threeme-pagetree-sys-note">
+                <source>Threeme: Important note on page</source>
+                <target>Threeme: Wichtiger Hinweis auf Seite</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.threeme_header_css">
+                <source>Scheme</source>
+                <target>Gestaltung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.threeme_header_css.0">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+
+            <trans-unit id="imageManipulation.mobile">
+                <source>Mobile</source>
+                <target>Mobile</target>
+            </trans-unit>
+            <trans-unit id="imageManipulation.tablet">
+                <source>Tablet</source>
+                <target>Tablet</target>
+            </trans-unit>
+            <trans-unit id="imageManipulation.desktop">
+                <source>Desktop</source>
+                <target>Desktop</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

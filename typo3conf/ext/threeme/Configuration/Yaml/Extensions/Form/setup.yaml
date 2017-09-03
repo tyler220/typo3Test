@@ -1,0 +1,24 @@
+# #################################################
+# Version note:
+# Threeme configuration for Form Framework
+# #################################################
+
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          10: EXT:threeme/Resources/Private/Yaml/Extensions/Form/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:threeme/Resources/Private/Fluid/Extensions/Form/Templates/'
+                partialRootPaths:
+                  20: 'EXT:threeme/Resources/Private/Fluid/Extensions/Form/Partials/'
+                layoutRootPaths:
+                  20: 'EXT:threeme/Resources/Private/Fluid/Extensions/Form/Layouts/'

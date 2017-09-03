@@ -1,0 +1,137 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:powermail 3.15.0
+# #################################################
+
+# Include static from extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/constants.txt">
+
+# Don't include static "BootstrapClassesAndLayout", use Bootstrap from Threeme instead.
+# See section "styles.framework" at the end of this file for bootstrap setup.
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/BootstrapClassesAndLayout/constants.txt">
+
+
+plugin.tx_powermail {
+    view {
+        # cat=powermail_main/file; type=string; label= Path to template root (FE)
+        templateRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/Powermail/Templates/
+
+        # cat=powermail_main/file; type=string; label= Path to template partials (FE)
+        partialRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/Powermail/Partials/
+
+        # cat=powermail_main/file; type=string; label= Path to template layouts (FE)
+        layoutRootPath = {$threeme.enable.privateBasePath}/Fluid/Extensions/Powermail/Layouts/
+    }
+
+    settings {
+        misc {
+            # cat=powermail_additional//0820; type=int+; label= Misc Upload Filesize: Define the maximum filesize of file uploads in bytes (10485760 Byte -> 10 MB)
+            uploadSize = 10485760
+
+            # cat=powermail_additional//0830; type=text; label= Misc Upload Fileextensions: Define the allowed filetypes with their extensions for fileuploads and separate them with commas (e.g. jpg,jpeg,gif)
+            uploadFileExtensions = jpg,jpeg,gif,png,tif,txt,doc,docx,xls,xlsx,ppt,pptx,pdf,flv,mpg,mpeg,avi,mp3,zip,rar,ace,csv
+
+            # cat=powermail_additional//0840; type=boolean; label= Randomized Filenames: Uploaded filenames can be randomized to respect data privacy
+            randomizeFileName = 1
+
+            # cat=powermail_additional//0845; type=boolean; label= Force JavaScript Datepicker: Per default html5 Date or Datetime format is used. If you don't want to use it and want to have the same datepicker all over all browsers, you can enable this feature
+            forceJavaScriptDatePicker = 1
+
+            # cat=powermail_additional//0850; type=boolean; label= Debug Settings: Show all Settings from TypoScript, Flexform and Global Config in Devlog
+            debugSettings = 0
+
+            # cat=powermail_additional//0860; type=boolean; label= Debug Variables: Show all given Plugin variables from GET or POST in Devlog
+            debugVariables = 0
+
+            # cat=powermail_additional//0870; type=boolean; label= Debug Mails: Show all mail values in Devlog
+            debugMail = 0
+
+            # cat=powermail_additional//0880; type=boolean; label= Debug Save to Table: Show all values if you want to save powermail variables to another table in Devlog
+            debugSaveToTable = 0
+
+            # cat=powermail_additional//0890; type=boolean; label= Debug Spamshield: Show Spamshield Functions in Devlog
+            debugSpamshield = 0
+        }
+
+        spamshield {
+            # cat=powermail_spam//0900; type=boolean; label= SpamShield Active: En- or disable Spamshield for Powermail
+            enable = 0
+
+            # cat=powermail_spam//0910; type=int+; label= Spamshield Spamfactor in %: Set limit for spamfactor in powermail forms in % (e.g. 85)
+            factor = 75
+
+            # cat=powermail_spam//0920; type=text; label= Spamshield Notifymail: Admin can get an email if he/she wants to get informed if a mail failed. Let this field empty and no mail will be sent (e.g. admin@mail.com)
+            email =
+
+            # cat=powermail_spam//0930; type=text; label= Spamshield Notifymail Subject: Subject for notification Email to Admin
+            emailSubject = Spam in powermail form recognized
+
+            # cat=powermail_spam//0940; type=text; label= Spamshield Notifymail Template: Template for notification Email to Admin
+            emailTemplate = EXT:powermail/Resources/Private/Templates/Mail/SpamNotification.html
+
+            # cat=powermail_spam//0950; type=text; label= Spamshield Log Template Location: Path of log file, ie. typo3temp/logs/powermail_spam.log, if empty, logging is deactivated
+            logfileLocation =
+
+            # cat=powermail_spam//0960; type=text; label= Spamshield Log Template: Template for entries written to log file
+            logTemplate = EXT:powermail/Resources/Private/Templates/Log/SpamNotification.html
+        }
+
+        captcha {
+            # cat=powermail_spam//0930; type=text; label= Captcha Background: Set own captcha background image (e.g. fileadmin/bg.png)
+            image = EXT:powermail/Resources/Private/Image/captcha_bg.png
+
+            # cat=powermail_spam//0940; type=text; label= Captcha Font: Set TTF-Font for captcha image (e.g. fileadmin/font.ttf)
+            font = EXT:powermail/Resources/Private/Fonts/ARCADE.TTF
+
+            # cat=powermail_spam//0950; type=text; label= Captcha Text Color: Define your text color in hex code - must start with # (e.g. #ff0000)
+            textColor = #444444
+
+            # cat=powermail_spam//0960; type=int+; label= Captcha Text Size: Define your text size in px (e.g. 24)
+            textSize = 32
+
+            # cat=powermail_spam//0970; type=text; label= Captcha Text Angle: Define two different values (start and stop) for your text random angle and separate it with a comma (e.g. -10,10)
+            textAngle = -5,5
+
+            # cat=powermail_spam//0980; type=text; label= Captcha Text Distance Hor: Define two different values (start and stop) for your text horizontal random distance and separate it with a comma (e.g. 20,80)
+            distanceHor = 20,80
+
+            # cat=powermail_spam//0990; type=text; label= Captcha Text Distance Ver: Define two different values (start and stop) for your text vertical random distance and separate it with a comma (e.g. 30,60)
+            distanceVer = 30,60
+        }
+
+        # CSS classes for frameworks (add only if bootstrapClassesAndLayout is not added before)
+        styles {
+            framework {
+                # cat=powermail_styles//0100; type=text; label= Framework classname(s) for form "form-horizontal"
+                formClasses = form-horizontal
+
+                # cat=powermail_styles//0110; type=text; label= Framework classname(s) for overall wrapping container of a field/label pair e.g. "row form-group"
+                fieldAndLabelWrappingClasses = form-group
+
+                # cat=powermail_styles//0120; type=text; label= Framework classname(s) for wrapping container of a field e.g. "row form-group"
+                fieldWrappingClasses = col-sm-9
+
+                # cat=powermail_styles//0130; type=text; label= Framework classname(s) for fieldlabels e.g. "col-md-2 col-md-3"
+                labelClasses = control-label col-sm-3
+
+                # cat=powermail_styles//0140; type=text; label= Framework classname(s) for fields e.g. "form-control"
+                fieldClasses = form-control
+
+                # cat=powermail_styles//0150; type=text; label= Framework classname(s) for fields with an offset e.g. "col-sm-offset-2"
+                offsetClasses = col-sm-offset-3
+
+                # cat=powermail_styles//0160; type=text; label= Framework classname(s) especially for radiobuttons e.g. "radio"
+                radioClasses = radio
+
+                # cat=powermail_styles//0170; type=text; label= Framework classname(s) especially for checkboxes e.g. "check"
+                checkClasses = checkbox
+
+                # cat=powermail_styles//0180; type=text; label= Framework classname(s) for the submit button e.g. "btn btn-primary"
+                submitClasses = btn btn-primary
+
+                # cat=powermail_styles//0190; type=text; label= Framework classname(s) for "create" message after submit
+                createClasses = powermail_create
+            }
+        }
+    }
+}

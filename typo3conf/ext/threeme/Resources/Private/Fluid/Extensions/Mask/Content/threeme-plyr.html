@@ -1,0 +1,82 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:threeme="http://typo3.org/ns/THREEME/Threeme/ViewHelpers">
+
+<f:comment>
+    Support Frontend Editing by EXT:frontend_editing:
+    If you want to get Mask elements work with the new frontend editing, follow theese steps:
+
+    1. Add 'xmlns:feedit="http://typo3.org/ns/TYPO3/CMS/FrontendEditing/ViewHelpers"' as namespace to html tag
+    2. Wrap the whole Mask content below with < feedit:contentEditable table="tt_content" uid="{data.uid}">MASK ELEMENT< /feedit:contentEditable>
+    3. Beware of the spaces in the view helper -> '< feedit:' and '< /feedit:' -> this is for a vaild comment here, delete them! ;)
+</f:comment>
+
+
+<div id="c{data.uid}">
+    <f:if condition="{data.header}">
+        <f:switch expression="{data.header_layout}">
+            <f:case value="1">
+                <h1>{data.header}</h1>
+            </f:case>
+            <f:case value="2">
+                <h2>{data.header}</h2>
+            </f:case>
+            <f:case value="3">
+                <h3>{data.header}</h3>
+            </f:case>
+            <f:case value="4">
+                <h4>{data.header}</h4>
+            </f:case>
+            <f:case value="100">
+                <f:comment> -- do not show header -- </f:comment>
+            </f:case>
+            <f:case default="true">
+                <h2>{data.header}</h2>
+            </f:case>
+        </f:switch>
+    </f:if>
+    <f:render section="{data.tx_mask_type}Type" arguments="{_all}" />
+</div>
+
+<f:section name="videoType">
+    <video class="plyr" {f:if(condition:'{data.image.0}', then:'poster="{data.image.0.publicUrl}"')}
+        controls
+        crossorigin
+        data-plyr='{
+            <f:if condition="{data.properties.autoplay}">autoplay: "true"</f:if>
+        }'
+    >
+        <f:for each="{data.assets}" as="file">
+            <source src="{file.publicUrl}" type="{file.mimeType}" />
+
+            <f:if condition="{file.extension} == 'mp4'">
+                <a href="{file.publicUrl}" class="btn btn-primary" download>Download</a>
+            </f:if>
+        </f:for>
+
+        <f:if condition="{data.header_link}">
+            <f:comment>@Todo: Resolve sys_language_uid to shortIsoCode</f:comment>
+            <track src="{f:uri.page(pageUid:'{data.header_link}')}" kind="captions" srclang="{data.sys_language_uid}" label="{data.accessibility_title}" default>
+        </f:if>
+    </video>
+</f:section>
+
+<f:section name="audioType">
+    <audio class="plyr" controls>
+        <f:for each="{data.assets}" as="file">
+            <source src="{file.publicUrl}" type="{file.mimeType}">
+        </f:for>
+    </audio>
+</f:section>
+
+<f:section name="embedType">
+    <f:if condition="{data.assets.0.extension} == 'youtube'">
+        <f:then>
+            <div class="plyr" data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'=')}"></div>
+        </f:then>
+        <f:else>
+            <div class="plyr" data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'/')}"></div>
+        </f:else>
+    </f:if>
+</f:section>
+</html>

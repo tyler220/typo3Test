@@ -1,0 +1,17 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from TYPO3 8.7.0
+# #################################################
+
+plugin.tx_indexedsearch {
+    view {
+         # cat=plugin.tx_indexedsearch/file; type=string; label=Path to template root (FE)
+        templateRootPath =  {$threeme.enable.privateBasePath}/Fluid/Extensions/IndexedSearch/Templates
+
+        # cat=plugin.tx_indexedsearch/file; type=string; label=Path to template partials (FE)
+        partialRootPath =  {$threeme.enable.privateBasePath}/Fluid/Extensions/IndexedSearch/Partials
+
+        # cat=plugin.tx_indexedsearch/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath =  {$threeme.enable.privateBasePath}/Fluid/Extensions/IndexedSearch/Layouts
+    }
+}

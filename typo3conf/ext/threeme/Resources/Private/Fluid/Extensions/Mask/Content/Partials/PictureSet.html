@@ -1,0 +1,27 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+    <f:comment>
+        Used in MASK elements for identical image / picture set rendering
+    </f:comment>
+
+    <picture>
+        <source
+            srcset="{f:uri.image(image: file, cropVariant: 'default')}"
+            media="(min-width: 1200px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '992', cropVariant: 'default')}, {f:uri.image(image: file, maxWidth: '1984', cropVariant: 'default')} 2x"
+            media="(min-width: 992px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '768', cropVariant: 'tablet')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'tablet')} 2x"
+            media="(min-width: 768px)"
+        >
+        <source
+            srcset="{f:uri.image(image: file, maxWidth: '768', cropVariant: 'mobile')}, {f:uri.image(image: file, maxWidth: '1536', cropVariant: 'mobile')} 2x"
+            media="(max-width: 767px)"
+        >
+        <f:media class="{class}" file="{file}" alt="{file.alternative}" title="{file.title}" cropVariant="default" />
+    </picture>
+</html>

@@ -1,0 +1,41 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Website" />
+
+<f:section name="Website">
+    <!--TYPO3SEARCH_begin-->
+    <div class="threeme-carousel">
+        <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+    </div>
+
+    <main id="threeme-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '201'}"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="threeme-banner">
+            <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '202'}"/>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+                </div>
+                <div class="col-sm-4">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+                </div>
+                <div class="col-sm-4">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}"/>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--TYPO3SEARCH_end-->
+</f:section>
+</html>

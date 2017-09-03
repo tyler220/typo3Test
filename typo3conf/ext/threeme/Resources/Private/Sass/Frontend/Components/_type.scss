@@ -1,0 +1,152 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Extensions/: SASS partials for TYPO3 extensions you use in your website.
+ * ./Frontend/Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Frontend/Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Frontend/Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor libraries in subfolders with SASS container files on top. Uncomment features in container as you need them, when your user stories demand the functionality.
+ * ./styles-*.scss: The SASS container files which are compiled to native CSS.
+ * ./config.rb: Configuration file for compass, if you want to complie your SASS on your own instead of using third party extensions like "dyncss".
+ *
+ *
+ * #2: SASS container and partials
+ * - Uncomment features in vendor container or in the compiling SASS files as you need them, when your user stories demand the functionality.
+ * - If you need to add a new or modify a (vendor) partial, create a new one in "Components" or "Sections" and include it in the compiling SASS file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ */
+
+
+/*!
+ * Custom styles
+ * -------------------------------------------------------------------------------------------------
+ */
+
+// @NOTE: Negate all top margins of atoms, just use bottom margins only and equalize them!
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+
+    small {
+        text-transform: uppercase;
+    }
+}
+
+h1, .h1 {
+    margin-bottom: ($padding-large-vertical * 3);
+    text-transform: uppercase;
+}
+
+h2, .h2 {
+    margin-bottom: ($padding-large-vertical * 2);
+}
+
+h3, .h3 {
+    margin-bottom: $padding-large-vertical;
+    font-weight: 400;
+}
+
+h4, .h4 {
+    margin-bottom: $padding-base-vertical;
+    font-weight: 400;
+}
+
+h5, .h5 {
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: ($padding-large-vertical * 2);
+}
+
+ul,
+ol {
+    margin-bottom: ($padding-large-vertical * 2);
+}
+
+em, strong {
+    font-family: $font-family-serif;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: ($padding-large-vertical * 4) 0 ($padding-large-vertical * 2) 0;
+    padding: 0;
+    position: relative;
+    border: none;
+    background-color: $threeme-border-color;
+}
+
+.lead {
+    font-size: $font-size-large;
+    font-weight: 600;
+}
+
+.threeme-text-note {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-large;
+    color: $text-color;
+    background-color: $gray-lighter;
+    @include threeme-border($threeme-border-width $threeme-border-width $threeme-border-width ($threeme-border-width * 5), $threeme-border-style, $threeme-border-color, 0);
+}
+
+.threeme-text-small {
+    font-size: $font-size-small;
+    font-weight: 300;
+}
+
+// Exception for cType 'Header'
+.threeme-header {
+    .threeme-header-date {
+        margin-bottom: $padding-small-vertical;
+    }
+
+    small {
+        display: block;
+        margin-bottom: $padding-small-vertical;
+    }
+
+    // Examples for use of the additional header field 'Scheme'
+    &.threeme-header-css-200 {
+        color: $brand-primary;
+
+        small {
+            color: lighten($brand-primary, 10%);
+        }
+    }
+
+    &.threeme-header-css-201 {
+        color: $brand-danger;
+
+        small {
+            color: lighten($brand-danger, 10%);
+        }
+    }
+}
+
+// Reduce font-size for small devices
+@media(max-width: $screen-xs-max) {
+    h1, .h1 {
+        margin-bottom: $padding-large-vertical;
+        font-size: ($font-size-h1 - 12);
+    }
+
+    h2, .h2 {
+        margin-bottom: $padding-large-vertical;
+        font-size: ($font-size-h2 - 6);
+    }
+
+    h3, .h3 {
+        margin-bottom: $padding-base-vertical;
+        font-size: ($font-size-h3 - 6);
+    }
+
+    h4, .h4 {
+        font-size: ($font-size-h4 - 4);
+    }
+}

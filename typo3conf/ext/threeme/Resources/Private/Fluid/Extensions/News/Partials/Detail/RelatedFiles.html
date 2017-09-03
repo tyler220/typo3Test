@@ -1,0 +1,128 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div class="news-related news-related-files">
+        <h4>
+            <f:translate key="related-files" />
+        </h4>
+        <ul class="ce-uploads">
+            <f:for each="{relatedFiles}" as="relatedFile">
+                <li>
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-1">
+                            <f:render section="Fileicon" arguments="{extension: relatedFile.originalResource.originalFile.properties.extension}" />
+                        </div>
+
+                        <div class="col-xs-10 col-sm-7 col-md-9">
+                            <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+                                <span class="ce-uploads-fileName">
+                                    {f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
+                                </span>
+                            </a>
+
+                            <span class="ce-uploads-filesize">
+                                - {relatedFile.originalResource.size -> f:format.bytes()}
+                            </span>
+
+                            <f:if condition="{relatedFile.originalResource.originalFile.properties.description}">
+                                <span class="ce-uploads-description">
+                                    {relatedFile.properties.description}
+                                </span>
+                            </f:if>
+                        </div>
+
+                        <div class="col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-2">
+                            <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" class="download btn btn-primary" target="_blank">
+                                <i class="fa fa-download" aria-hidden="true"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </div>
+
+    <f:section name="Fileicon">
+        <f:switch expression="{extension}">
+            <f:case value="xls">
+                <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="xlsx">
+                <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="doc">
+                <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="docx">
+                <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="ppt">
+                <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="pptx">
+                <i class="fa fa-3x fa-file-powerpoint-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case value="pdf">
+                <i class="fa fa-3x fa-file-pdf-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="zip">
+                <i class="fa fa-3x fa-file-zip-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case value="png">
+                <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="gif">
+                <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="jpg">
+                <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="jpeg">
+                <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="svg">
+                <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case value="html">
+                <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="htm">
+                <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="css">
+                <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="js">
+                <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="xml">
+                <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case value="txt">
+                <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="ts">
+                <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="csv">
+                <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case value="mp3">
+                <i class="fa fa-3x fa-file-audio-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="mp4">
+                <i class="fa fa-3x fa-file-video-o" aria-hidden="true"></i>
+            </f:case>
+            <f:case value="webm">
+                <i class="fa fa-3x fa-file-video-o" aria-hidden="true"></i>
+            </f:case>
+
+            <f:case default="true">
+                <i class="fa fa-3x fa-file-o" aria-hidden="true"></i>
+            </f:case>
+        </f:switch>
+    </f:section>
+</html>
